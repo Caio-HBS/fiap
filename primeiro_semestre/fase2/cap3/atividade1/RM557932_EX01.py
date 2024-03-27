@@ -39,10 +39,10 @@ for value in dias_da_semana.values():
             exit()
 
 # Conta os votos e dá o resultado.
-num_votos = None
+maior_num_votos = None
 for dia, voto in dias_da_semana.items():
-    if num_votos is None or voto > num_votos:
-        num_votos = voto
+    if maior_num_votos is None or voto > maior_num_votos:
+        maior_num_votos = voto
         dia_vencedor = dia
 
-print(f"\n\nA vencedora da votação é a {dia_vencedor.upper()}, com {num_votos} votos!")
+print(f"\n\nA vencedora da votação é a {dia_vencedor.upper()}, com {maior_num_votos} votos!")
