@@ -16,10 +16,10 @@ ACRESCIMO_PRECO_FINAL = {
 # Garante que o usuário digite um número válido no programa.
 while True:
     preco_carro = input("\nDigite o preço do carro (somente números): ")
-    try:
+    if preco_carro.isnumeric():
         preco_carro = abs(float(preco_carro))
         break
-    except:
+    else:
         continue
 
 print(f"O preço final à vista com desconto de 20% é de R${0.2 * preco_carro}")

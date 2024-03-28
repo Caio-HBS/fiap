@@ -10,10 +10,10 @@ TABELA_JUROS = {
 # Garante que o dado fornecido pelo usuário é válido.
 while True:
     valor_divida = input("Digite o valor da dívida: ")
-    try:
+    if valor_divida.isnumeric():
         valor_divida = float(valor_divida)
         break
-    except:
+    else:
         print("AVISO: Apenas números.")
         continue
 

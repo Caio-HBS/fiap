@@ -25,7 +25,7 @@ for colaborador in range(num_colaboradores):
             dias_da_semana[dia_escolhido] += 1
             break
         else:
-            print("\nAVISO: Dia inválido. Ex: segunda-feira.")
+            print("\nAVISO: Dia inválido. Ex. de dia válido: segunda-feira.")
             continue
 
 # Lida com casos onde a votação resulta num empate.

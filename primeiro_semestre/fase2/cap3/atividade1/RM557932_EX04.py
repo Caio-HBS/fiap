@@ -13,7 +13,7 @@ while True:
                 exit()
             else:
                 break
-        # Checagens no input para previnir erros.
+        # Checagens no input para previnir erros de runtime.
         else:
             print("\nAVISO: Digite um número de 1 a 3.")
             continue
