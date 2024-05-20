@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8867DEE4-3BEB-E15A-69D0-D1EA62141CAF" name="T_LOGRADOURO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:20:01 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_logradouro" id="A252C7BC-D990-19F2-3F2E-9F535CF48AB2">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:20:10 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_cep" id="12D57ACD-7185-F536-ACC1-E1137E579433">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:30:25 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_logradouro" id="04AF2854-6907-EE64-ED22-8346B76F2E2E">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:29:55 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="logradouro" id="DA02E7AD-DEAC-D212-3F26-EE7EB1DAF8A6">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:30:10 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero" id="D81A591F-510E-C378-D1FE-87CC5298EAE3">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:31:21 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="complemento" id="097C0164-DDC9-ED51-B86D-6EA8227C5D01">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:32:39 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3174C22F-AD2E-9D2A-4310-23107BC18D4B" name="T_LOGRADOURO PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:20:13 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A252C7BC-D990-19F2-3F2E-9F535CF48AB2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

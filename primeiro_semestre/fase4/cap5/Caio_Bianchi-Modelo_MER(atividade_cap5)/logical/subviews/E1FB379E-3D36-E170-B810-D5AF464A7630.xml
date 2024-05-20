@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.logical.DPVLogicalSubView" name="Logical - SubView_1" id="E1FB379E-3D36-E170-B810-D5AF464A7630">
+<createdBy>Caio Bianchi</createdBy>
+<modifiedBy>Caio Bianchi</modifiedBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<generatorId>20D88E71-6A38-FA0C-A099-BD12F2BCD3CC</generatorId>
+<importedid>20D88E71-6A38-FA0C-A099-BD12F2BCD3CC</importedid>
+<notation>2</notation>
+<showAllDetails>false</showAllDetails>
+<showElements>true</showElements>
+<showDatatype>true</showDatatype>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="A846BFD7-61A8-4F82-3198-9CDA5D5B5E40" otype="Entity" vid="5845CEEF-3A43-7D3D-E115-212A314AB9A3">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="811" y="492" width="150" height="53"/>
+<useDefaultColor>false</useDefaultColor>
+<backgroundColor>-3342388</backgroundColor>
+<foregroundColor>-10040320</foregroundColor>
+</OView>
+</objectViews>
+</Diagram>

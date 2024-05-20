@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="2239BBFA-F124-C26F-D994-A596DF79B75C">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:11:48 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

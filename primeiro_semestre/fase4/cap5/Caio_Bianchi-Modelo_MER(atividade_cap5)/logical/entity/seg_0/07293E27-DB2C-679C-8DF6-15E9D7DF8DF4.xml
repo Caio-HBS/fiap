@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="07293E27-DB2C-679C-8DF6-15E9D7DF8DF4" name="T_TELEFONE_FIXO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>4CCFC1E4-F091-3FF7-6856-55D39C6E8408</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<subtypesRefType>Arc implementation</subtypesRefType>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_telefone" id="05CA0D62-9DD6-7720-0E85-089572CDE845">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<generatorID>9BC6B543-304D-0CC5-78E6-E1725CB7EDC3</generatorID>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>2595B39C-4736-1E61-C4E8-619DA58C4195</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<referedAttribute>41F488D2-C56D-17DB-2CEA-CBCC7BF54928</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_contato" id="CF84AC06-F8FA-E1D6-581A-15D4B9F57B11">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<generatorID>9BC6B543-304D-0CC5-78E6-E1725CB7EDC3</generatorID>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>775A7F60-E7FE-0123-9E74-83507F81E235</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<referedAttribute>BCBBB381-1E13-F092-99B0-BEB9C5BD731C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero_fixo" id="5EE32879-43BB-BD10-435A-2115B3C12EEF">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>B8B6388C-8EE9-6C40-07D3-76FB81A4FF1D</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="757869ED-BB17-D290-5769-A6BAF8FBBB49" name="T_TELEFONES_FIXOS PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>EABC391F-16C1-08B4-88F7-6E07BCB07EC9</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>05CA0D62-9DD6-7720-0E85-089572CDE845</attributeRef>
+<attributeRef>CF84AC06-F8FA-E1D6-581A-15D4B9F57B11</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

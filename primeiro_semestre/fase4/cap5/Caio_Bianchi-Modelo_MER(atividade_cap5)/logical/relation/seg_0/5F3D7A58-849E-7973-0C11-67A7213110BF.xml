@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="relacao_grupo_grupo_contato" directorySegmentName="seg_0" id="5F3D7A58-849E-7973-0C11-67A7213110BF">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>761542AE-88ED-77A2-3974-92B1B9A95C89</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<sourcePk>A4D72B77-6B87-14CF-64FA-714AE2B2AEAB</sourcePk>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>68BA5E54-7428-EC89-30A7-B857FA556D6B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DEC02B67-C8E5-4732-8BC1-63CAC2F1184F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

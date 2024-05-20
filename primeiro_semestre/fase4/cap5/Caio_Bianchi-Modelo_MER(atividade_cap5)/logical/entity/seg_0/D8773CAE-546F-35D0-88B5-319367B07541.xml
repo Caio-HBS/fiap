@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D8773CAE-546F-35D0-88B5-319367B07541" name="T_TELEFONE">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>92762CB9-8902-F2F4-01C8-02F2438E0F9D</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<subtypesRefType>Arc implementation</subtypesRefType>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_telefone" id="41F488D2-C56D-17DB-2CEA-CBCC7BF54928">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>26B3746D-8533-671E-1F47-2B5C2B676BFF</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_contato" id="BCBBB381-1E13-F092-99B0-BEB9C5BD731C">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<generatorID>FFC8128D-1A3C-B76D-307D-3274402B4197</generatorID>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>E0CEE529-7CE6-08B5-B147-39F356F0B165</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<referedAttribute>8DE74BE0-26F4-B09D-2504-CF4A065C2191</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="codigo_ddi" id="78C1496D-386A-60B9-9D80-217AAAD39722">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[Exemplo: "+55".]]></commentInRDBMS>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>31440679-D836-BDB1-C82F-D6242FDB7F80</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="codigo_ddd" id="B86F8F01-4884-22E7-16D3-343B1A28ADCE">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[Exemplo: "11".]]></commentInRDBMS>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>18811737-B526-3014-49FA-2393BE0E5F0A</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="38141A17-8450-2CE9-1111-BE5FD90A5BA8" name="T_TELEFONES PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:13:26 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<importedID>2D6CD4A1-969F-88F6-F1C3-37C3ADA04956</importedID>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>41F488D2-C56D-17DB-2CEA-CBCC7BF54928</attributeRef>
+<attributeRef>BCBBB381-1E13-F092-99B0-BEB9C5BD731C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

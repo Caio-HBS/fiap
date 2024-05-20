@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="relacao_bairro_cidade" directorySegmentName="seg_0" id="6551C704-EFEB-DCC4-1BD4-481382BE71A8">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:23:28 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<sourcePk>F4847715-3B9E-842E-443B-100E319FEB7C</sourcePk>
+<targetPk>BE0E9AF4-9513-F216-65A4-E3236D2EB907</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>32FD01FB-9B0A-73C7-3AAB-ADB2AFCAB773</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C5198500-8609-B812-4509-120FA867A34C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

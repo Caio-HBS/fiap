@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="9CD084E6-94DD-CAB8-68CA-0E0D57AE58FD" mainViewID="08304CB9-6840-FDEF-5703-F10201B34BCC">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:11:48 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

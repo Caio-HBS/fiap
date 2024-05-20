@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="relacao_cidade_estado" directorySegmentName="seg_0" id="CACD33EF-D1DC-633D-8F18-59014861D334">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:23:50 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<engineerTo>
+<item key="4241A79D-02EB-83C4-1376-05104CDD703A" value="true"/>
+</engineerTo>
+<sourcePk>BB691152-FE2B-58C3-879A-CEEF36613055</sourcePk>
+<targetPk>F4847715-3B9E-842E-443B-100E319FEB7C</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>211E5E0E-DE4A-05BF-3BA8-14F9D6DEE257</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>32FD01FB-9B0A-73C7-3AAB-ADB2AFCAB773</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

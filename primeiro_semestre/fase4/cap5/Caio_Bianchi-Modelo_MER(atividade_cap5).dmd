@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Caio_Bianchi-Modelo_MER(atividade_cap5)" id="5E0CF7F1-9923-451B-E840-64733EA2956F" version="3.5">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-13 14:11:48 UTC</createdTime>
+<ownerDesignName>Caio_Bianchi-Modelo_MER(atividade_cap5)</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5E0CF7F1-9923-451B-E840-64733EA2956F</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="0A8C61B9-BBF1-F759-2432-206DD40470D9">
+<designStoragePath>D:\Documents\FIAP\1ª Semestre - 2024\Fase 4\Capítulo 5\Caio_Bianchi-Modelo_MER(atividade_cap5)</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>
