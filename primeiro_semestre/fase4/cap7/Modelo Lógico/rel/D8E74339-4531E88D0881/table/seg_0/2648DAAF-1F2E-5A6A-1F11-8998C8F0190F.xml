@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2648DAAF-1F2E-5A6A-1F11-8998C8F0190F" name="T_BANCO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>BD39A164-8FD4-2E68-6BD7-415488BEA095</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_banco" id="E827F492-500C-0907-3767-0A76EE3F6EE9">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>582F989E-7554-03E4-05FD-A8F65B3BAAF2</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_banco" id="E4626145-3649-3F2A-C271-87141B1937DE">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>6E74135A-96FA-ACF8-74BC-411F7F03EE61</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4848DC93-A9EB-AF7E-6691-213865C82CC5" name="T_BANCO_PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>37AFC85D-C153-65FE-A88E-913CBB8DCC42</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E827F492-500C-0907-3767-0A76EE3F6EE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

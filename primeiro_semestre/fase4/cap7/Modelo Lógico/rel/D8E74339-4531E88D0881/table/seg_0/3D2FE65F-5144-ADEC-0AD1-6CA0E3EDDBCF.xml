@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3D2FE65F-5144-ADEC-0AD1-6CA0E3EDDBCF" name="T_INVESTIMENTO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>3D080359-AACB-EAB5-DD25-C9AECBE1510D</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_investimento" id="1031BCDF-53D9-0B2E-6C3F-E1445D672A2B">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>A3C0FD2C-83A0-D49B-DA86-32F7574E2C6A</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_usuario" id="FFDD60A8-F7B9-F5A6-C2EC-4326235639AF">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>714D0192-8E9C-E17C-6077-0692A3431A90</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1C873AD-65E4-1995-1C4D-10AEAD7A1AA0" referredColumn="7C50D272-4C7B-33C9-83E1-B26D9FBD2ABE"/>
+</associations>
+</Column>
+<Column name="nm_investimento" id="FAE0689B-7F73-5D5C-22D5-FDF74CCC86B1">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>2D0F6393-E59D-D8E1-8C87-65780FCDB80D</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="desc_investimento" id="ABD9D8B9-00D5-1DB3-CC56-183F8EBE238D">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>152127B4-AC6F-84CC-8FE3-6775446BCCD0</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_inicio" id="C7F2FE8D-D19D-D7F8-5622-1398AE75503C">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>A5D1501B-988D-8EE4-1420-87EDCED01577</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valor_inicial" id="EE3C3DC2-214C-05AA-71DB-A36FF08F13C8">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>0C2A79D4-A773-5F8E-3CAC-DC0E3E1CA742</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="percent_mensal" id="E4E73976-A48A-7045-AE28-AF3894932C73">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>074BF298-9D8C-9CF9-1603-215AA048611A</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="60726B17-0E70-8488-EB99-55BA016552F3" name="T_INVESTIMENTO_PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>D99D7730-94C1-1386-0DB2-4BCC61334B12</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1031BCDF-53D9-0B2E-6C3F-E1445D672A2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7AE45AC4-C0E7-6F44-98EB-03BD832A8D3C" name="T_INVESTIMENTO_T_USUARIO_FK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>C0EB2687-1B8F-2B8B-43CB-B0BD99CC50C3</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFDD60A8-F7B9-F5A6-C2EC-4326235639AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

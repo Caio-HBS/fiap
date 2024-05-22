@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="relacao_usuario_usuario_info" directorySegmentName="seg_0" id="159242AA-3E94-E491-F424-7A09A4B1657F">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:05:27 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<sourcePk>5B7B5F40-F7F3-2653-E050-2520D908A6D7</sourcePk>
+<dominantRole>D6FBE262-6577-8D8A-BD39-3E982C2C353D</dominantRole>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D6FBE262-6577-8D8A-BD39-3E982C2C353D</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>17B60358-7495-1CE0-FF25-27506AEA763D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

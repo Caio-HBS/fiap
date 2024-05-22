@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6969DC2A-75ED-9F89-6F85-C69FF7849F9A" name="T_USUARIO_INFO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>17B60358-7495-1CE0-FF25-27506AEA763D</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_usuario" id="4A2335D2-26BF-59C0-D21F-48149875291A">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>410A21B8-67D7-F759-5DCB-8A8CF96A0D92</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B254F531-66FF-BF23-3667-3882DCEA51C3" referredColumn="7C50D272-4C7B-33C9-83E1-B26D9FBD2ABE"/>
+</associations>
+</Column>
+<Column name="dt_registro" id="B4EA5983-6D8B-F0EB-C2CC-1D1D98E3E954">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>82AF3E43-BB37-3F68-32EC-2843568108AC</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email_verificado" id="47648211-B4FA-4D76-B1DA-429F4ACAB68E">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>1FDDF88C-6D93-7FC1-0BFC-8539DE5F2B86</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="enviar_novidades" id="A4B83135-EA6F-2C7A-FCC9-466F112600B1">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>309AEE6C-6B15-C0D4-BC9E-7BD9BB31B5BC</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pronomes" id="3CC1E13A-78C8-AA34-5B2B-90F65E2D372D">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>2557BF1D-A7D5-E282-E4C3-D5757BD8D50E</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apelido" id="C795DAEE-DB96-635A-EC06-0BE8856BE954">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>A47A5374-A4CE-5F85-FCEA-9D16ACE088FB</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6676B183-5EE6-6D10-270B-4ED6CC780B1D" name="T_USUARIO_INFO_PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>4A2AAB00-C413-476A-CBE4-596E7714BEE1</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A2335D2-26BF-59C0-D21F-48149875291A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B511D1D-F92A-E7BD-401F-2E45A4E51F1D" name="T_USUARIO_INFO_T_USUARIO_FK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>159242AA-3E94-E491-F424-7A09A4B1657F</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A2335D2-26BF-59C0-D21F-48149875291A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
