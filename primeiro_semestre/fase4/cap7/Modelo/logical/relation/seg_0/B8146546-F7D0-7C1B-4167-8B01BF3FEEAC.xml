@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="relacao_conta_bancaria_serv_recorrente" directorySegmentName="seg_0" id="B8146546-F7D0-7C1B-4167-8B01BF3FEEAC">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:42:39 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<sourcePk>3098D557-3F61-067D-756B-EA453117E556</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>18AECE03-CACD-1393-6E54-3E48B1693894</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>E7B2BD99-50BD-A684-74E5-F73F9C355434</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

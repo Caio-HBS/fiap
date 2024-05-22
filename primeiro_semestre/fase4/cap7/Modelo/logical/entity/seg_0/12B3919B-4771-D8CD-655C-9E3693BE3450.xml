@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="12B3919B-4771-D8CD-655C-9E3693BE3450" name="T_BANCO_CONTA_BANCARIA">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 13:19:35 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_banco" id="AD4B364B-C362-213A-2017-3130572B43CE">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 13:19:53 UTC</createdTime>
+<generatorID>E9D5C0C0-9D40-3D0B-D5AF-687C58C02756</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<referedAttribute>582F989E-7554-03E4-05FD-A8F65B3BAAF2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_conta_bancaria" id="D1B9860E-7FA9-8153-0B20-D1DE2AFBF21D">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 13:20:19 UTC</createdTime>
+<generatorID>2533879E-A9EF-91E7-37B7-8BD0454D84E2</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<referedAttribute>A5CDE315-0833-90DE-7850-27C36A809836</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D483436B-9634-A999-B00E-C8B571D0980F" name="T_BANCO_CONTA_BANCARIA PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 13:19:53 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AD4B364B-C362-213A-2017-3130572B43CE</attributeRef>
+<attributeRef>D1B9860E-7FA9-8153-0B20-D1DE2AFBF21D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,192 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E7B2BD99-50BD-A684-74E5-F73F9C355434" name="T_SERV_RECORRENTE">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 13:55:13 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_serv_recorrente" id="F443A1E5-2A89-417E-C10B-2696BFA0A093">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:23:15 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="ABEB38E4-9F8A-6261-3C94-0938EDA23C07">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:31:18 UTC</createdTime>
+<generatorID>7601F347-3124-C97A-AE6F-60FDADC2E197</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<referedAttribute>66224C2D-5595-FBC8-F5BB-3EC07E8BB916</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_conta_bancaria" id="F34EC280-1929-BE61-B633-10FB76E3C3D8">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:42:39 UTC</createdTime>
+<generatorID>B8146546-F7D0-7C1B-4167-8B01BF3FEEAC</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<referedAttribute>A5CDE315-0833-90DE-7850-27C36A809836</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_servico" id="79455F52-4A21-D6C7-7342-56C8CF6AB1FC">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:23:45 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="desc_servico" id="1DA2E141-8EF3-C252-50F3-E671E14D12A8">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:24:19 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_registro_serv" id="D6237DA8-6923-2CD1-53F2-F53BE1FBBAA6">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:24:06 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_limite" id="C04BE541-B9B3-DA62-6F61-E13E03C501B0">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 13:55:25 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="frequencia" id="187FA1E1-8C93-F877-B3F2-7FD9A7930A83">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 13:56:05 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor_operacao" id="CFF7D914-6067-47BA-2AD4-F0969EE1D147">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 13:56:29 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="operacao_efetuada" id="523C140F-20ED-853D-76F3-39043333697F">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 13:57:05 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="a_pagar" id="7AEAB9CB-B5B3-5B1F-E6C2-3DEF72F54A21">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:25:38 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="a_receber" id="4650C72C-BF5C-69FF-0D98-748AF52774C9">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:25:50 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0A691F0E-5A6D-ABDB-379F-AAB08A287350" name="T_SERV_RECORRENTE PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-20 14:23:38 UTC</createdTime>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F443A1E5-2A89-417E-C10B-2696BFA0A093</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

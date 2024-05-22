@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="074DD89D-13BD-D86E-89D7-143B1CD14E2A" containerWithKeyObject="43892F41-1DFD-5731-1EF9-1945DB444D88" localFKIndex="C73DBE8C-F6A1-F65B-7361-210ED2BA5AB6" name="T_BANCO_CONTA_BANCARIA_T_CONTA_BANCARIA_FK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>2533879E-A9EF-91E7-37B7-8BD0454D84E2</generatorID>
+<ownerDesignName>Modelo Lógico</ownerDesignName>
+<referredTableLongName>T_CONTA_BANCARIA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BAABCEA3-0744-6987-B412-69C50BFEA71F</referredTableID>
+<keyObject>35911043-8554-2A28-0DD4-4D05753CAD14</keyObject>
+<referredKeyID>35911043-8554-2A28-0DD4-4D05753CAD14</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_conta_bancaria</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
