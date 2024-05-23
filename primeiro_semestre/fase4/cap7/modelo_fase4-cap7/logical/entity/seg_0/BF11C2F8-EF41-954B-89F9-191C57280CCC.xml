@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BF11C2F8-EF41-954B-89F9-191C57280CCC" name="T_OBJETIVO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:17:07 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_objetivo" id="401368B1-41A0-54AA-A61F-CE3074D74ADE">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:17:14 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="0D3959DC-F22E-8358-AFC2-5C53FF5C5A3B">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:19:53 UTC</createdTime>
+<generatorID>FE954E7A-D564-A27A-5155-819D9AFF125D</generatorID>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<referedAttribute>66224C2D-5595-FBC8-F5BB-3EC07E8BB916</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_objetivo" id="C8EDFE1A-839F-D6BB-EAE3-FEBC720814BA">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:17:32 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="desc_objetivo" id="02BEC88C-40B6-8B61-C080-DE53E09815A2">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:18:00 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_registro_objetivo" id="A4BC31A1-F988-2058-A6F1-CD75CB62FF77">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:18:17 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_objetivo" id="9DB77144-A192-82E0-F83C-DA825C6178E6">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:18:45 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_limite" id="5EBE7990-DB28-07AD-4DEA-37D897EE941A">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:18:35 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D9C922B1-4541-7ED6-D3C3-C831D384E95C" name="T_OBJETIVOS PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:17:31 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>401368B1-41A0-54AA-A61F-CE3074D74ADE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

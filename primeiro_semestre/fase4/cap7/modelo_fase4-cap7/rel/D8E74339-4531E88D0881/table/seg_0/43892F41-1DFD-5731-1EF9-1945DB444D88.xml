@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="43892F41-1DFD-5731-1EF9-1945DB444D88" name="T_BANCO_CONTA">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>12B3919B-4771-D8CD-655C-9E3693BE3450</generatorID>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<ordsAlias>t_banco_conta_bancaria</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_banco" id="346664E5-F11B-3714-4AE1-23A81CD1B539">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>AD4B364B-C362-213A-2017-3130572B43CE</generatorID>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3143D7BF-332F-C537-6DC9-3CF5246F58A3" referredColumn="E827F492-500C-0907-3767-0A76EE3F6EE9"/>
+</associations>
+</Column>
+<Column name="id_conta_bancaria" id="ACC5E520-1503-CB40-A056-6EB029B314EB">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>D1B9860E-7FA9-8153-0B20-D1DE2AFBF21D</generatorID>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="074DD89D-13BD-D86E-89D7-143B1CD14E2A" referredColumn="18A7340C-DDCE-2136-7F71-89E7CD716816"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E258414B-C1EC-66D1-6BB6-5D49C32397E3" name="PK_BANCO_CONTA">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>D483436B-9634-A999-B00E-C8B571D0980F</generatorID>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="346664E5-F11B-3714-4AE1-23A81CD1B539"/>
+<colUsage columnID="ACC5E520-1503-CB40-A056-6EB029B314EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9C5736C0-9039-9E24-0526-FD67AB570781" name="FK_BANCO_CONTA_BANCO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>E9D5C0C0-9D40-3D0B-D5AF-687C58C02756</generatorID>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="346664E5-F11B-3714-4AE1-23A81CD1B539"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C73DBE8C-F6A1-F65B-7361-210ED2BA5AB6" name="FK_BANCO_CONTA_CONTA">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-22 13:21:01 UTC</createdTime>
+<generatorID>2533879E-A9EF-91E7-37B7-8BD0454D84E2</generatorID>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ACC5E520-1503-CB40-A056-6EB029B314EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

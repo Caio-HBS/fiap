@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3D080359-AACB-EAB5-DD25-C9AECBE1510D" name="T_INVESTIMENTO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:11:28 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_investimento" id="A3C0FD2C-83A0-D49B-DA86-32F7574E2C6A">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:11:40 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="714D0192-8E9C-E17C-6077-0692A3431A90">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:16:17 UTC</createdTime>
+<generatorID>C0EB2687-1B8F-2B8B-43CB-B0BD99CC50C3</generatorID>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<referedAttribute>66224C2D-5595-FBC8-F5BB-3EC07E8BB916</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_investimento" id="2D0F6393-E59D-D8E1-8C87-65780FCDB80D">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:12:54 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="desc_investimento" id="152127B4-AC6F-84CC-8FE3-6775446BCCD0">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:15:08 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_inicio" id="A5D1501B-988D-8EE4-1420-87EDCED01577">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:15:34 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor_inicial" id="0C2A79D4-A773-5F8E-3CAC-DC0E3E1CA742">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:13:17 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,9,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="percent_mensal" id="074BF298-9D8C-9CF9-1603-215AA048611A">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:13:44 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D99D7730-94C1-1386-0DB2-4BCC61334B12" name="T_INVESTIMENTO PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 20:12:53 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A3C0FD2C-83A0-D49B-DA86-32F7574E2C6A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

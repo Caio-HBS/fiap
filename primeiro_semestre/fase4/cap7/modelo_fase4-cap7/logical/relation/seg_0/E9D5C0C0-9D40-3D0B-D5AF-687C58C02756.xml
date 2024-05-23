@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="relacao_banco_conta_bancaria" directorySegmentName="seg_0" id="E9D5C0C0-9D40-3D0B-D5AF-687C58C02756">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-05-21 13:19:53 UTC</createdTime>
+<ownerDesignName>modelo_fase4-cap7</ownerDesignName>
+<engineerTo>
+<item key="D8E74339-FA03-DF7E-47FA-4531E88D0881" value="true"/>
+</engineerTo>
+<sourcePk>37AFC85D-C153-65FE-A88E-913CBB8DCC42</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BD39A164-8FD4-2E68-6BD7-415488BEA095</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>12B3919B-4771-D8CD-655C-9E3693BE3450</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
