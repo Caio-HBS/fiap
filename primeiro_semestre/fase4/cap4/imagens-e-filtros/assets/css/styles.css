@@ -1,0 +1,17 @@
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+img {
+  width: 80%;
+  border-radius: 20px;
+  /* border-radius: 10px 40px 90px 140px; */
+  /* filter: grayscale(90%); */
+  /* filter: drop-shadow(10px 10px 10px #ccc); */
+  /* filter: contrast(10%); */
+  /* filter: saturate(50%); */
+  /* filter: opacity(50%); */
+  /* filter: brightness(110%); */
+  /* filter: blur(5px); */
+}
