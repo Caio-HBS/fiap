@@ -1,0 +1,21 @@
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 45px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 40px;
+  /* font-style: italic; */
+  /* text-decoration: line-through; */
+  /* text-transform: lowercase; */
+  /* word-spacing: 15px; */
+  /* letter-spacing: 15px; */
+}
