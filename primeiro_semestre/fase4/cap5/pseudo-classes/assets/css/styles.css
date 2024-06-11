@@ -1,0 +1,32 @@
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.box-hover:hover {
+  background-color: #dc143c;
+  color: #fff;
+  width: 100px;
+}
+
+.box-nth div:nth-child(3) {
+  background-color: #dc143c;
+  color: #fff;
+  width: 36px;
+}
+
+.box-first-last p:last-child {
+  background-color: #ccc;
+  width: 50px;
+}
+
+.box-first-last p:first-child {
+  background-color: #ccc;
+  width: 61px;
+}
+
+.box-not:not(.no-color) {
+  background-color: #dc143c;
+  width: 36px;
+}
