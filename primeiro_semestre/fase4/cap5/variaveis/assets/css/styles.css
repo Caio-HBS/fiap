@@ -1,0 +1,26 @@
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 10px auto;
+  padding: var(--space-30);
+  text-align: justify;
+  background-color: var(--bg-color);
+}
+
+.container h1 {
+  margin: var(--space-30) auto;
+  text-align: center;
+}
+
+.box {
+  --width-total: 60%;
+  --margin: 25px;
+  width: var(--width-total);
+  margin: var(--margin) auto;
+}
