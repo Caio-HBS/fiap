@@ -1,0 +1,12 @@
+body {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+div p {
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #dc143c;
+}
