@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 80%;
+  min-height: 600px;
+  margin: 20px auto;
+  border: 1px solid #333;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 20px;
+}
