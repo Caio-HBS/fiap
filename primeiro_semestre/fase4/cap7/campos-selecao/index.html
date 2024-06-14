@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <h1>Campos de seleção</h1>
+    <form id="dados" name="dados" method="post" action="">
+      <fieldset>
+        <legend>Select</legend>
+        <label for="area">Área de atuação</label>
+        <select name="area" id="area">
+          <option value="0" disabled selected>Selecione sua opção</option>
+          <option value="2">Front-end</option>
+          <option value="3">Back-end</option>
+          <option value="4">Banco de dados</option>
+          <option value="5">Gestão de projetos</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Datalist</legend>
+        <input list="linguagens" id="lista-linguagens" />
+        <datalist id="linguagens">
+          <option value="Java">
+          <option value="Python">
+          <option value="JavaScript">
+          <option value="C#">
+          <option value="C++">
+        </datalist>
+      </fieldset>
+    </form>
+  </body>
+</html>
