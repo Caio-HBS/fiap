@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  margin: 20px;
+}
+
+fieldset {
+  margin: 20px;
+  padding: 20px;
+}
+
+textarea {
+  width: 80%;
+  height: 200px;
+  padding: 20px;
+  resize: none;
+}
