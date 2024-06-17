@@ -1,0 +1,27 @@
+@media (max-width: 850px) {
+  .info .item {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+
+  .banner {
+    margin-top: 50px;
+  }
+
+  .banner h1 {
+    font-size: 2.3rem;
+  }
+
+  .banner h3 {
+    font-size: 1.3rem;
+  }
+
+  .cadastro input {
+    margin-bottom: 15px;
+  }
+}
