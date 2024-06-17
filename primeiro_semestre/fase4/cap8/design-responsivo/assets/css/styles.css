@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #999;
+}
+
+.container h1 {
+  font-size: 10vmin;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 700px) {
+  .container {
+    background-color: #ccc;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    background-color: #900;
+    color: #fff;
+  }
+
+  .container h1 {
+    font-size: 6vmin;
+  }
+}
