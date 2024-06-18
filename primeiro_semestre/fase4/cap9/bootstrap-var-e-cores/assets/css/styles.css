@@ -1,0 +1,8 @@
+h1 {
+  color: var(--bs-indigo);
+}
+
+.my-color {
+  color: var(--bs-warning-bg-subtle);
+  background-color: var(--bs-black);
+}
