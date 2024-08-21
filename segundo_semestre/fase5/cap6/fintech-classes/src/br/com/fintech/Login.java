@@ -9,9 +9,10 @@ public class Login {
     }
 
     public void doLogin(String username, String password) {
-        System.out.println("Realizando login para o usuário: " + "'" + username + "'\n");
+
+        System.out.println("Realizando login para o usuário: " + "'" + username + "'...\n");
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
@@ -20,6 +21,7 @@ public class Login {
         } else {
             System.out.println("Falha no login, cheque as credenciais e tente novamente.\n");
         }
+    
     }
 
 }
