@@ -18,6 +18,7 @@ public class UsuarioPremium extends Usuario {
 
     @Override
     public void getCotacao() {
+        // Simulando chamada a algum backend:
         System.out.println(
                 "Cotação em tempo real das principais moedas:" +
                 "\n        -Dólar-   -Euro-  -Libra-" +

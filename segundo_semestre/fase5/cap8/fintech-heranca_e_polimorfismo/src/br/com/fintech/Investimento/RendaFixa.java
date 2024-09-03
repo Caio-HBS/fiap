@@ -1,6 +1,7 @@
 package br.com.fintech.Investimento;
 
 public class RendaFixa extends Investimento {
+
     private double taxaDeIR;
 
     public RendaFixa(double valorInicial, double taxaDeJuros, double taxaDeIR) {
@@ -16,4 +17,5 @@ public class RendaFixa extends Investimento {
 
         return String.format("%.2f", valFinal);
     }
+
 }

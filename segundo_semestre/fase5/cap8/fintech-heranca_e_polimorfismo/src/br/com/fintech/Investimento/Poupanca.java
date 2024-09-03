@@ -1,6 +1,7 @@
 package br.com.fintech.Investimento;
 
 public class Poupanca extends Investimento {
+
     private static final double TAXA_FIXA = 0.005;
 
     public Poupanca(double valorInicial) {
@@ -13,4 +14,5 @@ public class Poupanca extends Investimento {
 
         return String.format("%.2f", valFinal);
     }
+
 }

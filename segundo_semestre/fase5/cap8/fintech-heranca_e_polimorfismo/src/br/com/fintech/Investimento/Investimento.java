@@ -1,6 +1,7 @@
 package br.com.fintech.Investimento;
 
 public abstract class Investimento {
+
     protected double valorInicial;
     protected double taxaDeJuros;
 
@@ -15,4 +16,5 @@ public abstract class Investimento {
         System.out.println("Valor Inicial: " + valorInicial);
         System.out.println("Taxa de Juros: " + taxaDeJuros + "%");
     }
+
 }

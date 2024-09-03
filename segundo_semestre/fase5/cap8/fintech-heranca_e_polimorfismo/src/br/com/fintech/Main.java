@@ -3,6 +3,9 @@ package br.com.fintech;
 import br.com.fintech.Investimento.Investimento;
 import br.com.fintech.Investimento.Poupanca;
 import br.com.fintech.Investimento.RendaFixa;
+import br.com.fintech.Servico.Servico;
+import br.com.fintech.Servico.ServicoRecorrente;
+import br.com.fintech.Servico.ServicoUnico;
 import br.com.fintech.Usuario.Usuario;
 import br.com.fintech.Usuario.UsuarioFree;
 import br.com.fintech.Usuario.UsuarioPremium;
@@ -49,5 +52,16 @@ public class Main {
         Investimento rendaFixa = new RendaFixa(2000, 0.08, 0.15);
         String retornoRendaFixa = rendaFixa.calcularRetorno(5);
         System.out.print("Retorno Renda Fixa em 5 anos: R$ " + retornoRendaFixa);
+
+
+        System.out.println("\n");
+        System.out.println("TESTES DOS SERVIÇOS");
+
+        Servico servicoUnic = new ServicoUnico("Jantar", "Jantar no restaurante chique", 231.97);
+        Servico servicoRec = new ServicoRecorrente("Spotify", "Mensalidade do Spotify", 20.0, 30);
+
+        servicoUnic.getResumo();
+        servicoRec.getResumo();
+
     }
 }
