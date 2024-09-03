@@ -1,5 +1,9 @@
 package br.com.fintech;
 
+import br.com.fintech.Investimento.Investimento;
+import br.com.fintech.Investimento.Poupanca;
+import br.com.fintech.Investimento.RendaFixa;
+import br.com.fintech.Usuario.Usuario;
 import br.com.fintech.Usuario.UsuarioFree;
 import br.com.fintech.Usuario.UsuarioPremium;
 
@@ -13,34 +17,37 @@ public class Main {
         BigDecimal valor3 = new BigDecimal("100.000");
 
         System.out.println("TESTES NOS USUÁRIOS");
-        UsuarioFree usuario1 = new UsuarioFree(
+        Usuario usuarioFree = new UsuarioFree(
                 "joao-silva@email.com", "João", "Silva", "senha-segura", valor2, valor1
         );
-        UsuarioPremium usuario2 = new UsuarioPremium(
+        Usuario usuarioPremium = new UsuarioPremium(
                 "joana-santos25@email.com", "Joana", "Santos", "senha-segura", valor1, valor3
         );
 
         System.out.println("---Resumo dos dois usuários---");
-        usuario1.getResumo();
-        usuario2.getResumo();
+        usuarioFree.getResumo();
+        usuarioPremium.getResumo();
 
         System.out.println("\n---Cotação para cada usuário---");
-        usuario1.getCotacao();
+        usuarioFree.getCotacao();
         System.out.println();
-        usuario2.getCotacao();
-
-        System.out.println("\n---Gráficos de lucro para cada usuário---");
-        usuario1.getGrafico();
-        System.out.println();
-        usuario2.getGrafico();
+        usuarioPremium.getCotacao();
 
         System.out.println("\n---Objetivo dos usuários---");
-        usuario1.getObjetivo();
+        usuarioFree.getObjetivo();
         System.out.println();
-        usuario2.getObjetivo();
+        usuarioPremium.getObjetivo();
 
 
         System.out.println("\n");
         System.out.println("TESTES DOS INVESTIMENTOS");
+
+        Investimento poupanca = new Poupanca(1000);
+        String retornoPoupanca = poupanca.calcularRetorno(12);
+        System.out.println("Retorno Poupança em 12 meses: R$ " + retornoPoupanca);
+
+        Investimento rendaFixa = new RendaFixa(2000, 0.08, 0.15);
+        String retornoRendaFixa = rendaFixa.calcularRetorno(5);
+        System.out.print("Retorno Renda Fixa em 5 anos: R$ " + retornoRendaFixa);
     }
 }

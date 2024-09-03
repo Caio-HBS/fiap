@@ -39,8 +39,6 @@ public abstract class Usuario {
 
     public abstract void getCotacao();
 
-    public abstract void getGrafico();
-
     public void getObjetivo() {
         BigDecimal objetivo = objetivoMonetario.subtract(capitalAtual);
 

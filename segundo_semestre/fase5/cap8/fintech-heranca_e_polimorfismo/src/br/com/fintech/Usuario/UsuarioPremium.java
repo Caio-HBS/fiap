@@ -26,19 +26,4 @@ public class UsuarioPremium extends Usuario {
         );
     }
 
-    @Override
-    public void getGrafico() {
-        System.out.println(
-                "Gráfico de lucro dos últimos três meses:\n" +
-                "|            /\n" +
-                "|           /\n" +
-                "|         _/\n" +
-                "|     ___/\n" +
-                "|    /\n" +
-                "|   /\n" +
-                "|  /\n" +
-                "|_________________"
-        );
-    }
-
 }

@@ -4,9 +4,6 @@ import java.math.BigDecimal;
 
 public class UsuarioFree extends Usuario {
 
-    private final String ERRO_PREMIUM = "ERRO: Esse recurso só está disponível para usuários premium,\n" +
-                                        "acesse https://fintech.com/assinar-premium para mais informações.";
-
     public UsuarioFree(
             String email, String nome, String sobrenome, String senha,
             BigDecimal capitalInicial, BigDecimal objetivoMonetario
@@ -21,12 +18,10 @@ public class UsuarioFree extends Usuario {
 
     @Override
     public void getCotacao() {
-        System.out.println(ERRO_PREMIUM);
-    }
-
-    @Override
-    public void getGrafico() {
-        System.out.println(ERRO_PREMIUM);
+        System.out.println(
+                "ERRO: Esse recurso só está disponível para usuários premium,\n" +
+                "acesse https://fintech.com/assinar-premium para mais informações."
+        );
     }
 
 }
