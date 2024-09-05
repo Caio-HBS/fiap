@@ -1,0 +1,12 @@
+.bg-svg {
+  background-image: url("../images/background.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+@media (max-width: 991.98px) {
+  .bg-svg {
+    background-position: top;
+  }
+}
