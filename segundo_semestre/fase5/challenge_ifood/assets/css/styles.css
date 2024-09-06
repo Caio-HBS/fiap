@@ -7,6 +7,11 @@
 
 @media (max-width: 991.98px) {
   .bg-svg {
+    background-size: 100%;
     background-position: top;
   }
+}
+
+.min-height-container {
+  min-height: 30vh;
 }
