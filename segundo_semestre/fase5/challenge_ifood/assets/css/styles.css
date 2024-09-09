@@ -13,6 +13,17 @@
   }
 }
 
+@media (min-width: 991.98px) {
+  .bigger-text {
+    font-size: 2vw;
+  }
+
+  .centralize {
+    width: 20%;
+    max-width: fit-content;
+  }
+}
+
 .border-ifood-red {
   border-color: #ea1d2c;
 }
