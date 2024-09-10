@@ -32,6 +32,24 @@
   color: #ea1d2c;
 }
 
+.ifood-red-btn {
+  background-color: #ea1d2c;
+  color: #ffffff;
+}
+
+.ifood-red:hover {
+  color: #ea1d2c;
+}
+
+.active-ifood-red {
+  color: #ffffff;
+  background-color: #ea1d2c;
+}
+
+.active-ifood-red:hover {
+  color: #ea1d2c;
+}
+
 .min-height-container {
   min-height: 30vh;
 }
