@@ -53,3 +53,7 @@
 .min-height-container {
   min-height: 30vh;
 }
+
+.clickable:hover {
+  cursor: pointer;
+}
