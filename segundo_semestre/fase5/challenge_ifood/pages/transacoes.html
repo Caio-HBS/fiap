@@ -24,6 +24,51 @@
       type="image/png"
     />
   </head>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="modalTransacoes"
+    tabindex="-1"
+    aria-labelledby="modalTransacoesLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalTransacoesLabel">Detalhes</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <h4>Nome</h4>
+          <p class="bg-white rounded-3 border p-1" id="modal-nome"></p>
+          <h4>Descrição</h4>
+          <p class="bg-white rounded-3 border p-1" id="modal-desc"></p>
+          <h4>Valor</h4>
+          <p class="bg-white rounded-3 border p-1" id="modal-valor"></p>
+          <h4>Categoria</h4>
+          <p class="bg-white rounded-3 border p-1" id="modal-cat"></p>
+          <h4>Data</h4>
+          <p class="bg-white rounded-3 border p-1" id="modal-data"></p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <body class="d-flex flex-column min-vh-100 bg-svg">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -68,19 +113,25 @@
         <div class="d-flex justify-content-between">
           <h2>Transações</h2>
           <a
-            href="#"
+            href="./nova-transacao.html"
             class="btn btn-danger ifood-red-btn"
             style="height: fit-content"
             >Nova transação</a
           >
         </div>
-        <table class="mt-3 table table-hover">
+        <table id="tabela-transacoes" class="mt-3 table table-hover">
           <thead class="text-center">
             <tr>
-              <th>Data</th>
-              <th>Nome</th>
-              <th class="d-none d-md-table-cell">Categoria</th>
-              <th>Valor</th>
+              <th onclick="ordenarTabela(0)" class="clickable">Data</th>
+              <th onclick="ordenarTabela(1)" class="clickable">Nome</th>
+              <th
+                onclick="ordenarTabela(2)"
+                class="d-none d-md-table-cell clickable"
+              >
+                Categoria
+              </th>
+              <th onclick="ordenarTabela(3)" class="clickable">Valor</th>
+              <th class="d-none d-md-table-cell">Detalhes</th>
             </tr>
           </thead>
           <tbody class="text-center">
@@ -89,60 +140,170 @@
               <td>Venda iFood</td>
               <td class="d-none d-md-table-cell">A receber</td>
               <td>R$78,98</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(0)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
             <tr>
               <td>01/09</td>
               <td>Venda iFood</td>
               <td class="d-none d-md-table-cell">A receber</td>
               <td>R$52,20</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(1)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
             <tr>
               <td>01/09</td>
               <td>Venda iFood</td>
               <td class="d-none d-md-table-cell">A receber</td>
               <td>R$103,98</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(2)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
             <tr>
               <td>05/09</td>
               <td>Pagamento motoboy</td>
               <td class="d-none d-md-table-cell">A pagar</td>
-              <td>R$1.478,92</td>
+              <td>R$1478,92</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(3)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
             <tr>
               <td>05/09</td>
               <td>Pagamento cozinheiros</td>
               <td class="d-none d-md-table-cell">A pagar</td>
-              <td>R$2.210,92</td>
+              <td>R$2210,92</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(4)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
             <tr>
               <td>05/09</td>
               <td>Fornecedor carnes</td>
               <td class="d-none d-md-table-cell">A pagar</td>
-              <td>R$2.450,00</td>
+              <td>R$2450,00</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(5)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
             <tr>
               <td>07/09</td>
               <td>Venda iFood</td>
               <td class="d-none d-md-table-cell">A receber</td>
               <td>R$35,94</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(6)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
             <tr>
               <td>07/09</td>
               <td>Feira</td>
               <td class="d-none d-md-table-cell">A pagar</td>
               <td>R$780,31</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(7)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
             <tr>
               <td>07/09</td>
               <td>Conta luz</td>
               <td class="d-none d-md-table-cell">A pagar</td>
               <td>R$550,96</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(8)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
             <tr>
               <td>07/09</td>
               <td>Conta água</td>
               <td class="d-none d-md-table-cell">A pagar</td>
               <td>R$679,31</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary d-none d-md-table-cell"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTransacoes"
+                  onclick="popularModal(9)"
+                >
+                  Ver mais
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -177,4 +338,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
+  <script src="../assets/js/transacoes.js"></script>
 </html>
