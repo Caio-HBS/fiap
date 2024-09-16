@@ -112,12 +112,20 @@
       <article class="mx-3 p-2 bg-white shadow-lg rounded-3">
         <div class="d-flex justify-content-between">
           <h2>Transações</h2>
-          <a
-            href="./nova-transacao.html"
-            class="btn btn-danger ifood-red-btn"
-            style="height: fit-content"
-            >Nova transação</a
-          >
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn border-ifood-red ifood-red botao-transacao noPrint d-none d-md-block"
+              onclick="window.print()"
+            >
+              Imprimir
+            </button>
+            <a
+              href="./nova-transacao.html"
+              class="btn btn-danger ifood-red-btn ms-1 botao-transacao noPrint"
+              >Nova transação</a
+            >
+          </div>
         </div>
         <table id="tabela-transacoes" class="mt-3 table table-hover">
           <thead class="text-center">
@@ -328,7 +336,7 @@
         </nav>
       </article>
     </main>
-    <footer class="footer mt-auto text-center pt-2">
+    <footer class="footer mt-auto text-center">
       <p>&copy; 2024. Todos os direitos reservados.</p>
     </footer>
   </body>

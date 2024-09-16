@@ -1,15 +1,17 @@
-.bg-svg {
-  background-image: url("../images/background-lg.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top;
+:root {
+  --ifood-red: #ea1d2c;
 }
 
-@media (max-width: 767.98px) {
+.bg-svg {
+  background-image: url("../images/background.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@media (min-width: 767.98px) {
   .bg-svg {
-    background-image: url("../images/background.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-image: url("../images/background-lg.svg");
+    background-position: top;
   }
 }
 
@@ -24,8 +26,18 @@
   }
 }
 
+@media print {
+  .noPrint {
+    display: none;
+  }
+}
+
+.botao-transacao {
+  height: fit-content;
+}
+
 .border-ifood-red {
-  border-color: #ea1d2c;
+  border-color: var(--ifood-red);
 }
 
 .ifood-red {
@@ -33,21 +45,21 @@
 }
 
 .ifood-red-btn {
-  background-color: #ea1d2c;
+  background-color: var(--ifood-red);
   color: #ffffff;
 }
 
 .ifood-red:hover {
-  color: #ea1d2c;
+  color: var(--ifood-red);
 }
 
 .active-ifood-red {
   color: #ffffff;
-  background-color: #ea1d2c;
+  background-color: var(--ifood-red);
 }
 
 .active-ifood-red:hover {
-  color: #ea1d2c;
+  color: var(--ifood-red);
 }
 
 .min-height-container {
