@@ -1,5 +1,6 @@
 :root {
   --ifood-red: #ea1d2c;
+  --light-ifood-red: #f19b9a;
 }
 
 .bg-svg {
@@ -8,10 +9,21 @@
   background-size: 100%;
 }
 
+.bg-svg-registro {
+  background-image: url("../images/background-login-register.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
 @media (min-width: 767.98px) {
   .bg-svg {
     background-image: url("../images/background-lg.svg");
     background-position: top;
+  }
+
+  .bg-svg-registro {
+    background-position: center;
   }
 }
 
@@ -41,20 +53,25 @@
 }
 
 .ifood-red {
-  color: #ea1d2c;
+  color: var(--ifood-red);
 }
 
 .ifood-red-btn {
   background-color: var(--ifood-red);
-  color: #ffffff;
+  color: white;
 }
 
 .ifood-red:hover {
   color: var(--ifood-red);
 }
 
+.ifood-red-select:active {
+  background-color: var(--ifood-red);
+  color: white;
+}
+
 .active-ifood-red {
-  color: #ffffff;
+  color: white;
   background-color: var(--ifood-red);
 }
 
@@ -68,4 +85,75 @@
 
 .clickable:hover {
   cursor: pointer;
+}
+
+.nova-transac input[type="text"],
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  resize: none;
+  transition: border-color 0.5s ease;
+}
+
+.nova-transac input[type="text"]:focus,
+textarea:focus {
+  border-color: var(--ifood-red);
+  outline: none;
+}
+
+.custom-form-box {
+  background-color: var(--light-ifood-red);
+  border: 3px solid white;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.form-control {
+  background-color: var(--light-ifood-red);
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.form-control:focus {
+  background-color: var(--light-ifood-red);
+  border-bottom: 1px solid black;
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: rgba(0, 0, 0, 0.281);
+}
+
+.btn-custom {
+  background-color: var(--ifood-red);
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #630d0f;
+}
+
+.btn-custom:active {
+  background-color: var(--ifood-red);
+  box-shadow: none;
+  outline: none;
+}
+
+.header-text {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: #b22222;
+}
+
+.custom-link:hover {
+  color: #a52a2a;
 }
