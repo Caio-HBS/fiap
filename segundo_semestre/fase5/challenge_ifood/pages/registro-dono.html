@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login</title>
+    <title>Registro (dono)</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -17,20 +17,20 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
     <link
       rel="shortcut icon"
-      href="./assets/images/favicon.png"
+      href="../assets/images/favicon.png"
       type="image/png"
     />
   </head>
   <body class="d-flex flex-column min-vh-100 bg-svg-registro">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid d-flex justify-content-center">
-        <a class="navbar-brand text-white" href="./pages/dashboard.html">
+        <a class="navbar-brand text-white" href="./dashboard.html">
           <strong>Gerenciamento</strong>
           <img
-            src="./assets/images/ifood-logo.png"
+            src="../assets/images/ifood-logo.png"
             alt="Logo"
             height="24"
             class="d-inline-block align-text-top"
@@ -39,15 +39,53 @@
       </div>
     </nav>
 
-    <main class="mt-auto">
-      <div class="container mt-auto">
+    <main>
+      <div class="container container-custom mt-md-5">
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="form-box custom-form-box p-4 shadow-sm">
-              <h2 class="header-text">LOGIN</h2>
-              <form id="login-form">
+              <h2 class="header-text">REGISTRO (DONO)</h2>
+              <form id="registro-form">
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="CPF" />
+                  <input type="text" class="form-control" placeholder="Nome" />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Sobrenome"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nome da empresa"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="E-mail"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="Telefone"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input type="number" class="form-control" placeholder="CPF" />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Endereço"
+                  />
                 </div>
                 <div class="mb-3">
                   <input
@@ -56,11 +94,8 @@
                     placeholder="Senha"
                   />
                 </div>
-                <div class="text-center">
-                  <a href="#" class="custom-link">Esqueceu sua senha?</a>
-                </div>
                 <button type="submit" class="btn btn-custom w-100 mt-4">
-                  REGISTRAR
+                  <strong>REGISTRAR</strong>
                 </button>
               </form>
             </div>
@@ -79,5 +114,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
-  <script src="./assets/js/redirecionar.js"></script>
+  <script src="../assets/js/redirecionar.js"></script>
 </html>
