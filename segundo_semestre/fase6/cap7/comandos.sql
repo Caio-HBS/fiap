@@ -294,18 +294,99 @@ COMMIT;
 -- Consultas
 
 -- Consultar os dados de um usuário (filtrar a partir do seu código).
+SELECT
+    NOME,
+    SOBRENOME,
+    DT_NASCIMENTO,
+    EMAIL,
+    NM_USUARIO
+FROM
+    T_USUARIO
+WHERE
+    ID_USUARIO = [ID USUÁRIO];
 
+-- Consultar os dados de um único registro de despesa de um usuário (filtrar a
+-- partir do código do usuário e do código da despesa).
+SELECT
+    *
+FROM
+    T_SERV_UNICO
+WHERE
+    ID_USUARIO = [ID USUÁRIO]
+    AND ID_SERV_UNICO = [ID SERVIÇO ÚNICO];
 
--- Consultar os dados de um único registro de despesa de um  usuário (filtrar a partir do código do usuário e do código da despesa).
+-- Consultar os dados de todos os registros de despesas de um  usuário,
+-- ordenando-os dos registros mais recentes para os mais antigos (filtrar a
+-- partir do seu código).
+SELECT
+    *
+FROM
+    T_SERV_UNICO
+WHERE
+    ID_USUARIO = [ID USUÁRIO]
+ORDER BY
+    DT_REGISTRO_SERV;
 
+-- Consultar os dados de um único registro de investimento de um usuário
+-- (filtrar a partir do código do usuário e do código de investimento).
+SELECT
+    *
+FROM
+    T_INVESTIMENTO
+WHERE
+    ID_USUARIO = [ID USUÁRIO]
+    AND ID_INVESTIMENTO = [ID INVESTIMENTO];
 
--- Consultar os dados de todos os registros de despesas de um  usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código).
+-- Consultar os dados de todos os registros de investimentos de um  usuário,
+-- ordenando-os dos registros mais recentes para os mais antigos (filtrar a
+-- partir do seu código).
+SELECT
+    *
+FROM
+    T_INVESTIMENTO
+WHERE
+    ID_USUARIO = [ID USUÁRIO]
+ORDER BY
+    DT_INICIO DESC;
 
-
--- Consultar os dados de um único registro de investimento de um  usuário (filtrar a partir do código do usuário e do código de investimento).
-
-
--- Consultar os dados de todos os registros de investimentos de um  usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código).
-
-
--- Consultar os dados básicos de um usuário, o último investimento registrado e a última despesa registrada (filtrar a partir do código de usuário – consulta necessária para o dashboard. Dica: veja consulta com junções).
+-- Consultar os dados básicos de um usuário, o último investimento registrado e
+-- a última despesa registrada (filtrar a partir do código de usuário – consulta
+-- necessária para o dashboard. Dica: veja consulta com junções).
+SELECT
+    U.ID_USUARIO,
+    U.NOME,
+    SU.ID_SERV_UNICO,
+    SU.DATA_SERVICO,
+    SU.A_PAGAR,
+    INV.ID_INVESTIMENTO,
+    INV.DATA_INVESTIMENTO
+FROM
+    T_USUARIO U
+    LEFT JOIN (
+        SELECT
+            ID_SERV_UNICO,
+            ID_USUARIO,
+            A_PAGAR,
+            DATA_SERVICO
+        FROM
+            T_SERV_UNICO
+        WHERE
+            A_PAGAR = 'Y'
+            AND ID_USUARIO = [ID USUÁRIO]
+        ORDER BY
+            DT_SERVICO DESC LIMIT 1
+    ) SU
+    ON U.ID_USUARIO = SU.ID_USUARIO
+    LEFT JOIN (
+        SELECT
+            ID_INVESTIMENTO,
+            ID_USUARIO,
+            DATA_INVESTIMENTO
+        FROM
+            T_INVESTIMENTO
+        WHERE
+            ID_USUARIO = [ID USUÁRIO]
+        ORDER BY
+            DATA_INVESTIMENTO DESC LIMIT 1
+    ) INV
+    ON U.ID_USUARIO = INV.ID_USUA;
