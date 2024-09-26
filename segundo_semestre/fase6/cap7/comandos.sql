@@ -260,98 +260,102 @@ COMMIT;
 
 -- Consultar os dados de um usuário (filtrar a partir do seu código).
 SELECT
-    NOME,
-    SOBRENOME,
-    DT_NASCIMENTO,
-    EMAIL,
-    NM_USUARIO
+    nome,
+    sobrenome,
+    email,
+    nm_usuario
+    dt_nascimento,
 FROM
-    T_USUARIO
+    t_usuario
 WHERE
-    ID_USUARIO = [ID USUÁRIO];
+    id_usuario = [ID USUÁRIO];
 
 -- Consultar os dados de um único registro de despesa de um usuário (filtrar a
 -- partir do código do usuário e do código da despesa).
 SELECT
     *
 FROM
-    T_SERV_UNICO
+    t_serv_unico
 WHERE
-    ID_USUARIO = [ID USUÁRIO]
-    AND ID_SERV_UNICO = [ID SERVIÇO ÚNICO];
+    id_usuario = [ID USUÁRIO]
+    AND id_serv_unico = [ID SERVIÇO ÚNICO]
+    AND a_pagar = 'Y'; -- Garante que o serviço será uma despesa
 
--- Consultar os dados de todos os registros de despesas de um  usuário,
+-- Consultar os dados de todos os registros de despesas de um usuário,
 -- ordenando-os dos registros mais recentes para os mais antigos (filtrar a
 -- partir do seu código).
 SELECT
     *
 FROM
-    T_SERV_UNICO
+    t_serv_unico
 WHERE
-    ID_USUARIO = [ID USUÁRIO]
+    id_usuario = [ID USUÁRIO]
+    AND a_pagar = 'Y'
 ORDER BY
-    DT_REGISTRO_SERV;
+    dt_registro_serv;
 
 -- Consultar os dados de um único registro de investimento de um usuário
 -- (filtrar a partir do código do usuário e do código de investimento).
 SELECT
     *
 FROM
-    T_INVESTIMENTO
+    t_investimento
 WHERE
-    ID_USUARIO = [ID USUÁRIO]
-    AND ID_INVESTIMENTO = [ID INVESTIMENTO];
+    id_usuario = [ID USUÁRIO]
+    AND id_investimento = [ID INVESTIMENTO];
 
--- Consultar os dados de todos os registros de investimentos de um  usuário,
+-- Consultar os dados de todos os registros de investimentos de um usuário,
 -- ordenando-os dos registros mais recentes para os mais antigos (filtrar a
 -- partir do seu código).
 SELECT
     *
 FROM
-    T_INVESTIMENTO
+    t_investimento
 WHERE
-    ID_USUARIO = [ID USUÁRIO]
+    id_usuario = [ID USUÁRIO]
 ORDER BY
-    DT_INICIO DESC;
+    dt_inicio DESC;
 
 -- Consultar os dados básicos de um usuário, o último investimento registrado e
 -- a última despesa registrada (filtrar a partir do código de usuário – consulta
 -- necessária para o dashboard. Dica: veja consulta com junções).
 SELECT
-    U.ID_USUARIO,
-    U.NOME,
-    SU.ID_SERV_UNICO,
-    SU.DATA_SERVICO,
-    SU.A_PAGAR,
-    INV.ID_INVESTIMENTO,
-    INV.DATA_INVESTIMENTO
+    u.id_usuario,
+    u.nome,
+    u.sobrenome,
+    u.nm_usuario,
+    su.nm_servico,
+    su.dt_operacao,
+    inv.nm_investimento,
+    inv.valor_inicial,
+    inv.percent_mensal,
+    inv.dt_inicio
 FROM
-    T_USUARIO U
+    t_usuario u
     LEFT JOIN (
         SELECT
-            ID_SERV_UNICO,
-            ID_USUARIO,
-            A_PAGAR,
-            DATA_SERVICO
+            id_serv_unico,
+            nm_servico
+            dt_operacao
         FROM
-            T_SERV_UNICO
+            t_serv_unico
         WHERE
-            A_PAGAR = 'Y'
-            AND ID_USUARIO = [ID USUÁRIO]
+            a_pagar = 'Y'
+            AND id_usuario = [ID USUÁRIO]
         ORDER BY
-            DT_SERVICO DESC LIMIT 1
-    ) SU
-    ON U.ID_USUARIO = SU.ID_USUARIO
+            dt_operacao DESC LIMIT 1
+    ) su
+    ON u.id_usuario = su.id_usuario
     LEFT JOIN (
         SELECT
-            ID_INVESTIMENTO,
-            ID_USUARIO,
-            DATA_INVESTIMENTO
+            id_investimento,
+            id_usuario,
+            dt_inicio
         FROM
-            T_INVESTIMENTO
+            t_investimento
         WHERE
-            ID_USUARIO = [ID USUÁRIO]
+            id_usuario = [ID USUÁRIO]
         ORDER BY
-            DATA_INVESTIMENTO DESC LIMIT 1
-    ) INV
-    ON U.ID_USUARIO = INV.ID_USUA;
+            dt_inicio DESC LIMIT 1
+    ) inv
+    ON u.id_usuario = inv.id_usuario;
