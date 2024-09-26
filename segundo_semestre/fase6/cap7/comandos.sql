@@ -190,47 +190,47 @@ INSERT INTO t_serv_recorrente (
 );
 
 -- Alterar todos os dados das despesas do usuário.
-UPDATE T_SERV_UNICO
+UPDATE t_serv_unico
 SET
-    ID_SERV_UNICO = [NOVO ID SERVIÇO],
-    ID_USUARIO = [NOVO ID USUARIO],
-    ID_CONTA_BANCARIA = [NOVO ID CONTA],
-    NM_SERVICO = '[NOVO NOME DO SERVIÇO]',
-    DESC_SERVICO = '[NOVA DESCRIÇÃO DO SERVIÇO]',
-    DT_REGISTRO_SERV = TO_DATE('[NOVA DATA DE REGISTRO DO SERVIÇO]','dd/mm/yyyy'),
-    DT_OPERACAO = TO_DATE('[NOVA DATA DA OPERAÇÃO BANCÁRIA]','dd/mm/yyyy'),
-    VALOR_OPERACAO = [NOVO VALOR DA OPERAÇÃO],
+    id_serv_unico = [NOVO ID SERVIÇO],
+    id_usuario = [NOVO ID USUARIO],
+    id_conta_bancaria = [NOVO ID CONTA],
+    nm_servico = '[NOVO NOME DO SERVIÇO]',
+    desc_servico = '[NOVA DESCRIÇÃO DO SERVIÇO]',
+    dt_registro_serv = TO_DATE('[NOVA DATA DE REGISTRO DO SERVIÇO]','dd/mm/yyyy'),
+    dt_operacao = TO_DATE('[NOVA DATA DA OPERAÇÃO BANCÁRIA]','dd/mm/yyyy'),
+    valor_operacao = [NOVO VALOR DA OPERAÇÃO],
 WHERE
-    ID_SERV_UNICO = [ID SERVIÇO];
+    id_serv_unico = [ID SERVIÇO];
 
 COMMIT;
 
-UPDATE T_SERV_RECORRENTE
+UPDATE t_serv_recorrente
 SET
-    ID_SERV_UNICO = [NOVO ID SERVIÇO],
-    ID_USUARIO = [NOVO ID USUÁRIO],
-    ID_CONTA_BANCARIA = [NOVO ID CONTA],
-    NM_SERVICO = '[NOVO NOME DO SERVIÇO]',
-    DESC_SERVICO = '[NOVA DESCRIÇÃO DO SERVIÇO]',
-    DT_REGISTRO_SERV = TO_DATE('[NOVA DATA DE REGISTRO DO SERVIÇO]','dd/mm/yyyy'),
-    DT_LIMITE = TO_DATE('[NOVA DATA LIMITE]','dd/mm/yyyy'),
-    FREQUENCIA = '[NOVA FREQUÊNCIA]',
-    VALOR_OPERACAO = [NOVO VALOR OPERAÇÃO],
-    OPERACAO_EFETUADA = '[OPERAÇÃO EFETUADA]',
+    id_serv_recorrente = [NOVO ID SERVIÇO],
+    id_usuario = [NOVO ID USUÁRIO],
+    id_conta_bancaria = [NOVO ID CONTA],
+    nm_servico = '[NOVO NOME DO SERVIÇO]',
+    desc_servico = '[NOVA DESCRIÇÃO DO SERVIÇO]',
+    dt_registro_serv = TO_DATE('[NOVA DATA DE REGISTRO DO SERVIÇO]','dd/mm/yyyy'),
+    dt_limite = TO_DATE('[NOVA DATA LIMITE]','dd/mm/yyyy'),
+    frequencia = '[NOVA FREQUÊNCIA]',
+    valor_operacao = [NOVO VALOR OPERAÇÃO],
+    operacao_efetuada = '['Y' OU 'N']',
 WHERE
-    ID_SERV_RECORRENTE = [ID SERVIÇO];
+    id_serv_recorrente = [ID SERVIÇO];
 
 COMMIT;
 
 -- Cadastrar os dados para investimentos.
-INSERT INTO T_INVESTIMENTO (
-    ID_INVESTIMENTO,
-    ID_USUARIO,
-    NM_INVESTIMENTO,
-    DESC_INVESTIMENTO,
-    DT_INICIO,
-    VALOR_INICIAL,
-    PERCENT_MENSAL
+INSERT INTO t_investimento (
+    id_investimento,
+    id_usuario,
+    nm_investimento,
+    desc_investimento,
+    dt_inicio,
+    valor_inicial,
+    percent_mensal
 ) VALUES (
     [ID INVESTIMENTO],
     [ID USUÁRIO],
@@ -242,20 +242,17 @@ INSERT INTO T_INVESTIMENTO (
 );
 
 -- Alterar todos os dados para investimentos do usuario.
-UPDATE T_INVESTIMENTO
+UPDATE t_investimento
 SET
-    ID_INVESTIMENTO = [NOVO ID INVESTIMENTO],
-    ID_USUARIO = [NOVO ID USUÁRIO],
-    NM_INVESTIMENTO = '[NOVO NOME DO INVESTIMENTO]',
-    DESC_INVESTIMENTO = '[NOVA DESCRIÇÃO DO INVESTIMENTO]',
-    DT_INICIO = TO_DATE(
-        '[NOVA DATA DE INÍCIO DO INVESTIMENTO]',
-        'dd/mm/yyyy'
-    ),
-    VALOR_INICIAL = [NOVO VALOR INICIAL],
-    PERCENT_MENSAL = [PERCENTUAL MENSAL]
+    id_investimento = [NOVO ID INVESTIMENTO],
+    id_usuario = [NOVO ID USUÁRIO],
+    nm_investimento = '[NOVO NOME DO INVESTIMENTO]',
+    desc_investimento = '[NOVA DESCRIÇÃO DO INVESTIMENTO]',
+    dt_inicio = TO_DATE('[NOVA DATA DE INÍCIO DO INVESTIMENTO]','dd/mm/yyyy'),
+    valor_inicial = [NOVO VALOR INICIAL],
+    percent_mensal = [PERCENTUAL MENSAL]
 WHERE
-    ID_INVESTIMENTO = [ID INVESTIMENTO];
+    id_investimento = [ID INVESTIMENTO];
 
 COMMIT;
 
