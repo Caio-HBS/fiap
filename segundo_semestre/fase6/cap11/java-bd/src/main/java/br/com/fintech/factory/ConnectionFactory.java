@@ -1,5 +1,7 @@
 package br.com.fintech.factory;
 
+import br.com.fintech.exception.GenericaException;
+import br.com.fintech.exception.NaoFoiPossivelConectarException;
 import br.com.fintech.exception.TabelaNaoEncontradaException;
 import br.com.fintech.exception.ValidacaoException;
 
@@ -13,21 +15,24 @@ public class ConnectionFactory {
     private static final String USUARIO = System.getenv("usuario");
     private static final String SENHA = System.getenv("senha");
 
-    public static Connection getConnection() throws TabelaNaoEncontradaException, ValidacaoException {
-        Connection connection = null;
-        
+    public static Connection getConnection(
+    ) throws TabelaNaoEncontradaException, ValidacaoException, NaoFoiPossivelConectarException, GenericaException {
         try {
-            connection = DriverManager.getConnection(URL, USUARIO, SENHA);
+            return DriverManager.getConnection(URL, USUARIO, SENHA);
         } catch (SQLException e) {
             if (e.getErrorCode() == 942) {
                 throw new TabelaNaoEncontradaException("TABELA", "tabela não encontrada.");
             }
-
             if (e.getErrorCode() == 1017) {
                 throw new ValidacaoException();
             }
+            if (e.getErrorCode() == 12514) {
+                throw new NaoFoiPossivelConectarException(e.getErrorCode());
+            } else {
+                throw new GenericaException(e.getMessage(), e.getErrorCode());
+            }
         }
-        return connection;
+
     }
 
 }
