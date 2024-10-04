@@ -2,8 +2,8 @@ package br.com.fintech.exception;
 
 public class TabelaNaoEncontradaException extends Exception {
 
-    public TabelaNaoEncontradaException(String recurso, String mensagem) {
-        super(recurso + ": " + mensagem);
+    public TabelaNaoEncontradaException(String mensagem) {
+        super(mensagem);
     }
 
 }

@@ -11,7 +11,8 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
-    private static final String URL = System.getenv("url"); // Variáveis de ambiente para informações sensíveis
+    // Utilização de variáveis de ambiente para guardar e recuperar informações sensíveis
+    private static final String URL = System.getenv("url");
     private static final String USUARIO = System.getenv("usuario");
     private static final String SENHA = System.getenv("senha");
 
@@ -20,8 +21,9 @@ public class ConnectionFactory {
         try {
             return DriverManager.getConnection(URL, USUARIO, SENHA);
         } catch (SQLException e) {
+            // Tratamento de exceções mais comuns baseado no código.
             if (e.getErrorCode() == 942) {
-                throw new TabelaNaoEncontradaException("TABELA", "tabela não encontrada.");
+                throw new TabelaNaoEncontradaException("Tabela não encontrada. Verifique a query.");
             }
             if (e.getErrorCode() == 1017) {
                 throw new ValidacaoException();
