@@ -4,107 +4,107 @@ import java.sql.Date;
 
 public class Investimento {
 
-    Long id_investimento;
-    Long id_usuario;
-    String nm_investimento;
-    String desc_investimento;
-    Date dt_inicio;
-    float valor_inicial;
-    int percent_mensal;
+    Long idInvestimento;
+    Long idUsuario;
+    String nmInvestimento;
+    String descInvestimento;
+    Date dtInicio;
+    float valorInicial;
+    int percentMensal;
 
     public Investimento() {
     }
 
     public Investimento(
-            String nm_investimento, String desc_investimento,
-            Date dt_inicio, float valor_inicial, int percent_mensal
+            String nmInvestimento, String descInvestimento,
+            Date dtInicio, float valorInicial, int percentMensal
     ) {
-        this.nm_investimento = nm_investimento;
-        this.desc_investimento = desc_investimento;
-        this.dt_inicio = dt_inicio;
-        this.valor_inicial = valor_inicial;
-        this.percent_mensal = percent_mensal;
+        this.nmInvestimento = nmInvestimento;
+        this.descInvestimento = descInvestimento;
+        this.dtInicio = dtInicio;
+        this.valorInicial = valorInicial;
+        this.percentMensal = percentMensal;
     }
 
     public Investimento(
-            Long id_investimento, Long id_usuario, String nm_investimento, String desc_investimento,
-            Date dt_inicio, float valor_inicial, int percent_mensal
+            Long idInvestimento, Long idUsuario, String nmInvestimento, String descInvestimento,
+            Date dtInicio, float valorInicial, int percentMensal
     ) {
-        this.id_investimento = id_investimento;
-        this.id_usuario = id_usuario;
-        this.nm_investimento = nm_investimento;
-        this.desc_investimento = desc_investimento;
-        this.dt_inicio = dt_inicio;
-        this.valor_inicial = valor_inicial;
-        this.percent_mensal = percent_mensal;
+        this.idInvestimento = idInvestimento;
+        this.idUsuario = idUsuario;
+        this.nmInvestimento = nmInvestimento;
+        this.descInvestimento = descInvestimento;
+        this.dtInicio = dtInicio;
+        this.valorInicial = valorInicial;
+        this.percentMensal = percentMensal;
     }
 
-    public Long getId_investimento() {
-        return id_investimento;
+    public Long getIdInvestimento() {
+        return idInvestimento;
     }
 
-    public void setId_investimento(Long id_investimento) {
-        this.id_investimento = id_investimento;
+    public void setIdInvestimento(Long idInvestimento) {
+        this.idInvestimento = idInvestimento;
     }
 
-    public Long getId_usuario() {
-        return id_usuario;
+    public Long getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setId_usuario(Long id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setIdUsuario(Long idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public String getNm_investimento() {
-        return nm_investimento;
+    public String getNmInvestimento() {
+        return nmInvestimento;
     }
 
-    public void setNm_investimento(String nm_investimento) {
-        this.nm_investimento = nm_investimento;
+    public void setNmInvestimento(String nmInvestimento) {
+        this.nmInvestimento = nmInvestimento;
     }
 
-    public String getDesc_investimento() {
-        return desc_investimento;
+    public String getDescInvestimento() {
+        return descInvestimento;
     }
 
-    public void setDesc_investimento(String desc_investimento) {
-        this.desc_investimento = desc_investimento;
+    public void setDescInvestimento(String descInvestimento) {
+        this.descInvestimento = descInvestimento;
     }
 
-    public Date getDt_inicio() {
-        return dt_inicio;
+    public Date getDtInicio() {
+        return dtInicio;
     }
 
-    public void setDt_inicio(Date dt_inicio) {
-        this.dt_inicio = dt_inicio;
+    public void setDtInicio(Date dtInicio) {
+        this.dtInicio = dtInicio;
     }
 
-    public float getValor_inicial() {
-        return valor_inicial;
+    public float getValorInicial() {
+        return valorInicial;
     }
 
-    public void setValor_inicial(float valor_inicial) {
-        this.valor_inicial = valor_inicial;
+    public void setValorInicial(float valorInicial) {
+        this.valorInicial = valorInicial;
     }
 
-    public int getPercent_mensal() {
-        return percent_mensal;
+    public int getPercentMensal() {
+        return percentMensal;
     }
 
-    public void setPercent_mensal(int percent_mensal) {
-        this.percent_mensal = percent_mensal;
+    public void setPercentMensal(int percentMensal) {
+        this.percentMensal = percentMensal;
     }
 
     @Override
     public String toString() {
         return "Investimento{" +
-               "id_investimento=" + id_investimento +
-               ", id_usuario=" + id_usuario +
-               ", nm_investimento='" + nm_investimento + '\'' +
-               ", desc_investimento='" + desc_investimento + '\'' +
-               ", dt_inicio=" + dt_inicio +
-               ", valor_inicial=" + valor_inicial +
-               ", percent_mensal=" + percent_mensal +
+               "id_investimento=" + idInvestimento +
+               ", id_usuario=" + idUsuario +
+               ", nm_investimento='" + nmInvestimento + '\'' +
+               ", desc_investimento='" + descInvestimento + '\'' +
+               ", dt_inicio=" + dtInicio +
+               ", valor_inicial=" + valorInicial +
+               ", percent_mensal=" + percentMensal +
                '}';
     }
 

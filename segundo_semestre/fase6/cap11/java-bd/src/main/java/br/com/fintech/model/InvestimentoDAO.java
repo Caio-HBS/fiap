@@ -30,11 +30,11 @@ public class InvestimentoDAO {
                     "dt_inicio, valor_inicial, percent_mensal) VALUES (1, seq_investimento.nextval, ?, ?, ?, ?, ?)"
             );
 
-            stm.setString(1, inv.getNm_investimento());
-            stm.setString(2, inv.getDesc_investimento());
-            stm.setDate(3, inv.getDt_inicio());
-            stm.setDouble(4, inv.getValor_inicial());
-            stm.setDouble(5, inv.getPercent_mensal());
+            stm.setString(1, inv.getNmInvestimento());
+            stm.setString(2, inv.getDescInvestimento());
+            stm.setDate(3, inv.getDtInicio());
+            stm.setDouble(4, inv.getValorInicial());
+            stm.setInt(5, inv.getPercentMensal());
 
             stm.executeUpdate();
         } catch (SQLException e) {
@@ -49,15 +49,15 @@ public class InvestimentoDAO {
 
             List<Investimento> lista = new ArrayList<>();
             while (result.next()) {
-                Long id_inv = result.getLong("id_investimento");
-                Long id_usuario = result.getLong("id_usuario");
+                Long idInv = result.getLong("id_investimento");
+                Long idUsuario = result.getLong("id_usuario");
                 String inv = result.getString("nm_investimento");
-                String desc_inv = result.getString("desc_investimento");
+                String descInv = result.getString("desc_investimento");
                 Date data = result.getDate("dt_inicio");
                 float valor = result.getFloat("valor_inicial");
                 int percent = result.getInt("percent_mensal");
 
-                lista.add(new Investimento(id_inv, id_usuario, inv, desc_inv, data, valor, percent));
+                lista.add(new Investimento(idInv, idUsuario, inv, descInv, data, valor, percent));
             }
 
             return lista;
