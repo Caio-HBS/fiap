@@ -38,7 +38,7 @@ public class ServicoUnicoView {
                 System.out.println("BD: Serviço único inserido.");
             }
 
-            // Recuperando todos os investimentos cadastrados no BD
+            // Recuperando todos os serviços únicos cadastrados no BD
             List<ServicoUnico> suRec = dao.getAll();
             dao.fecharConexao();
 

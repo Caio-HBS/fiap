@@ -15,7 +15,7 @@ public class ServicoUnicoDAO {
         try {
             conexao = ConnectionFactory.getConnection();
         } catch (TabelaNaoEncontradaException | ValidacaoException | NaoFoiPossivelConectarException |
-                GenericaException e) {
+                 GenericaException e) {
             System.err.println(e.getMessage());
             System.exit(1);
         }
@@ -23,8 +23,12 @@ public class ServicoUnicoDAO {
 
     public void insert(ServicoUnico su) throws ErroNaQueryException {
         try {
+            // Uma vez que o enunciado dizia para não implementar um DAO para o usuário, o grupo decidiu que as queries
+            // de inserção apontariam para um usuário criado previamente no banco de dados que possui id 1.
             PreparedStatement stm = conexao.prepareStatement(
-                    "INSERT INTO t_serv_unico (id_serv_unico, id_usuario, id_conta_bancaria, nm_servico, desc_servico, dt_registro_serv, dt_operacao, valor_operacao, a_pagar, a_receber) VALUES (seq_serv_unico.nextval, 1, 2, ?, ?, ?, ?, ?, ?, ?)"
+                    "INSERT INTO t_serv_unico (id_serv_unico, id_usuario, id_conta_bancaria, nm_servico, " +
+                    "desc_servico, dt_registro_serv, dt_operacao, valor_operacao, a_pagar, a_receber) VALUES (" +
+                    "seq_serv_unico.nextval, 1, 2, ?, ?, ?, ?, ?, ?, ?)"
             );
 
             stm.setString(1, su.getNmServico());
@@ -49,20 +53,20 @@ public class ServicoUnicoDAO {
 
             List<ServicoUnico> lista = new ArrayList<>();
             while (result.next()) {
-                Long id_serv_unico = result.getLong("id_serv_unico");
-                Long id_usuario = result.getLong("id_usuario");
-                Long id_conta_bancaria = result.getLong("id_conta_bancaria");
-                String nm_servico = result.getString("nm_servico");
-                String desc_servico = result.getString("desc_servico");
-                Date dt_registro_serv = result.getDate("dt_registro_serv");
-                Date dt_operacao = result.getDate("dt_operacao");
-                double valor_operacao = result.getDouble("valor_operacao");
-                char a_pagar = result.getString("a_pagar").toUpperCase().charAt(0);
-                char a_receper = result.getString("a_receber").toUpperCase().charAt(0);
+                Long idServUnico = result.getLong("id_serv_unico");
+                Long idUsuario = result.getLong("id_usuario");
+                Long idContaBancaria = result.getLong("id_conta_bancaria");
+                String nmServico = result.getString("nm_servico");
+                String descServico = result.getString("desc_servico");
+                Date dtRegistroServ = result.getDate("dt_registro_serv");
+                Date dtOperacao = result.getDate("dt_operacao");
+                double valorOperacao = result.getDouble("valor_operacao");
+                char aPagar = result.getString("a_pagar").toUpperCase().charAt(0);
+                char aReceber = result.getString("a_receber").toUpperCase().charAt(0);
 
                 lista.add(
-                        new ServicoUnico(id_serv_unico, id_usuario, id_conta_bancaria, nm_servico, desc_servico,
-                                dt_registro_serv, dt_operacao, valor_operacao, a_pagar, a_receper)
+                        new ServicoUnico(idServUnico, idUsuario, idContaBancaria, nmServico, descServico,
+                                dtRegistroServ, dtOperacao, valorOperacao, aPagar, aReceber)
                 );
             }
             return lista;
