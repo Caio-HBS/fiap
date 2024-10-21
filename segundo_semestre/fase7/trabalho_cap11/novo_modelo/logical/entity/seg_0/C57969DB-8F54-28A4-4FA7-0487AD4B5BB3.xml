@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C57969DB-8F54-28A4-4FA7-0487AD4B5BB3" name="T_NOTICIA">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:15:39 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_noticia" id="9633CF73-D9B4-077A-1268-B14D1FF0C3F1">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:15:48 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="DBB44C86-6AD1-49B0-1DD0-A3F049B293F4">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:38:40 UTC</createdTime>
+<generatorID>C0BA8232-D3AC-B719-979D-4C5C5ACBB8A4</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<referedAttribute>AC2BC026-0F0F-1F08-160E-715B83DCAA2C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_publicacao" id="A5CDFCA4-6BBD-86C1-0973-74098315FCD2">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:17:08 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="titulo" id="C70AEFEA-1AD0-3498-D599-A74D6825F422">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:16:01 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="texto" id="1ABB88F1-FD64-32C2-5EF3-168E02C8E08A">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:16:10 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0414EB61-9CF2-28F7-C6A9-A5BCACC7A25E" name="T_NOTICIAS PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:17:41 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9633CF73-D9B4-077A-1268-B14D1FF0C3F1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

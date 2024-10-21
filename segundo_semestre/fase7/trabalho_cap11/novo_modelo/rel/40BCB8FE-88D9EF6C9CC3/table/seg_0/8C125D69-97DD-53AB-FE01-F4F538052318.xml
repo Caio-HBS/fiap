@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8C125D69-97DD-53AB-FE01-F4F538052318" name="T_OPERACAO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>6E3BCC12-736D-D46A-41F4-5ECC6897907E</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_operacao" id="66EE20D2-F76A-F273-DB55-5F2C736AE1C9">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>C49BD191-B706-BAF9-2D90-A6D1063F954A</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_USUARIO_id_usuario" id="283661ED-68D2-A7BB-9F07-D26F7A631A5F">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>62D08118-4DF4-0027-16F4-C05E34FF8203</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A14740E1-6381-242A-756E-4C317EE30FFE" referredColumn="042F466D-375C-15E4-CD99-FC3E79D83389"/>
+</associations>
+</Column>
+<Column name="nm_operacao" id="98E56161-857F-0330-3CBF-A6F1CA31048A">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>03CB36F1-03C9-9447-CD71-4517E08F9BEC</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="desc_operacao" id="3A6AC89C-672F-DAB9-6AA2-B4B298D9503B">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>0CF13687-353C-F7C0-2FD3-BA66298F261D</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_registro" id="80B66C27-2A1A-BD8F-54F7-66B2F2F8B999">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>16EDFDC4-6CE0-FAF1-C258-EF990AFB3164</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_operacao" id="134B5D86-36C3-1FCD-5CE7-C29D1E105137">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>05CEAA5E-1907-48F2-37B1-F47AE10B548F</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valor" id="E3A5EFE8-2EF5-3127-CB6E-E2264070E987">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>1EFD9343-7E15-8EA5-D8E4-ADC7B2B441C7</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="despesa" id="EC188529-BA90-CC02-A3CD-607BF2821026">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>26210F50-AD0C-A3FF-0525-B497C571EA11</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="receita" id="ECC39C85-22D8-C660-33F9-0CECD4B810CA">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>90E927C8-1FB5-7E30-0775-34A5E45B85B9</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D5B3770C-DAE9-1E8B-A8A2-B117FFA9BDC0" name="T_OPERACAO_PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>23D8EFF8-C342-1B4B-CFDB-F2D95DA0660C</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66EE20D2-F76A-F273-DB55-5F2C736AE1C9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F8FACAEA-B11E-402A-736A-73BA1E11766D" name="T_OPERACAO_T_USUARIO_FK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>795BB1AC-61C0-20BD-77CE-BE8DE793F718</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="283661ED-68D2-A7BB-9F07-D26F7A631A5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

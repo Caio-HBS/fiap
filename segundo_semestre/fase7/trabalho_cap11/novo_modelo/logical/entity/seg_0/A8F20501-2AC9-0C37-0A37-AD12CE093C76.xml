@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A8F20501-2AC9-0C37-0A37-AD12CE093C76" name="T_INVESTIMENTO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:31:39 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_investimento" id="816696F0-57ED-6594-4E3F-383BF9B82A5E">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:31:45 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="7B85533F-CB5A-D93D-874A-8D152974CC65">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:39:33 UTC</createdTime>
+<generatorID>EDA68DF3-5239-9D5A-687A-73DD926E7F6B</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<referedAttribute>AC2BC026-0F0F-1F08-160E-715B83DCAA2C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_investimento" id="759BD563-6F54-FC61-155A-7B6E5317A334">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:31:48 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="desc_investimento" id="3E5F9CA3-1F17-CEDD-E4B2-EB515F4D7A9F">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:31:54 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_inicio" id="FA4E6EF8-5420-5FE1-C2FD-506150AB9F9B">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:31:58 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_termino" id="4DFD07EE-B19E-EC7E-C32E-68E923411775">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:32:07 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor_inicial" id="1006B073-2F0D-7C47-4B1E-B43146F92F9A">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:32:12 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="percent_mensal" id="719CC458-590F-F6A6-86B3-7109A672EEC9">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:32:18 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>100</dataTypePrecision>
+<ownDataTypeParameters>,100,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B434BA32-A90D-6276-C8DF-C7F0BA1E0D30" name="T_INVESTIMENTO PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:32:49 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>816696F0-57ED-6594-4E3F-383BF9B82A5E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7C9296E1-8920-E3AD-5289-9A4E24DEDA4B" name="T_INVESTIMENTO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>A8F20501-2AC9-0C37-0A37-AD12CE093C76</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_investimento" id="6DC3D199-7BCA-6478-4825-1274A0AF0350">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>816696F0-57ED-6594-4E3F-383BF9B82A5E</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_USUARIO_id_usuario" id="8190F4D6-51E4-6E0E-6ED9-71E7F81A1A72">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>7B85533F-CB5A-D93D-874A-8D152974CC65</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F6568D0F-2D83-1562-F797-FD3738CF7195" referredColumn="042F466D-375C-15E4-CD99-FC3E79D83389"/>
+</associations>
+</Column>
+<Column name="nm_investimento" id="3D88098B-8F5C-ABC4-07F8-48A7B9CD4488">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>759BD563-6F54-FC61-155A-7B6E5317A334</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="desc_investimento" id="D9BCE576-6DBF-90ED-D8FE-0E33968742E0">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>3E5F9CA3-1F17-CEDD-E4B2-EB515F4D7A9F</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_inicio" id="CA3A6E75-DC87-6F75-983F-208C91EFFA39">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>FA4E6EF8-5420-5FE1-C2FD-506150AB9F9B</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_termino" id="2A7D1920-80BB-BFA3-D9CE-C134733ED719">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>4DFD07EE-B19E-EC7E-C32E-68E923411775</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valor_inicial" id="6D68C28F-D557-8C3B-BE93-761511E23169">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>1006B073-2F0D-7C47-4B1E-B43146F92F9A</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="percent_mensal" id="D9D076F5-224E-EFEF-BA74-566307F956BD">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>719CC458-590F-F6A6-86B3-7109A672EEC9</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>100</dataTypePrecision>
+<ownDataTypeParameters>,100,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="43C29D85-D34B-4E4E-FF1D-F42F76530F90" name="T_INVESTIMENTO_PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>B434BA32-A90D-6276-C8DF-C7F0BA1E0D30</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DC3D199-7BCA-6478-4825-1274A0AF0350"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F11B8E24-DAC5-D492-BFCE-19B250A7D404" name="T_INVESTIMENTO_T_USUARIO_FK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>EDA68DF3-5239-9D5A-687A-73DD926E7F6B</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8190F4D6-51E4-6E0E-6ED9-71E7F81A1A72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

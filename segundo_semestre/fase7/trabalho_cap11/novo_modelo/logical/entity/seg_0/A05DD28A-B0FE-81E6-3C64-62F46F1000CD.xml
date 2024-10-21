@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A05DD28A-B0FE-81E6-3C64-62F46F1000CD" name="T_CONTA_BANCARIA">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:22:10 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_conta_bancaria" id="A7A181C7-4815-FAD4-6318-7620DAC9BFC1">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:22:18 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="1B25F595-D864-8F73-A05B-8187646DB102">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:37:37 UTC</createdTime>
+<generatorID>65042A6C-D406-9597-52AE-F09F59DCEF4C</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<referedAttribute>AC2BC026-0F0F-1F08-160E-715B83DCAA2C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_conta" id="84BB7456-7F44-F3BA-7C5C-D621189FB91F">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:22:32 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="agencia" id="61AB54C4-39D3-B315-9540-14FEF2D04916">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:22:35 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_verificacao_agencia" id="98335CE0-AB78-373B-4CA7-A0EEB08F7680">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:22:40 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_conta_bancaria" id="60BD88DF-B430-7AE3-2379-1F81B12A6666">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:23:03 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,12,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_verificacao_conta" id="31515E0F-094A-5587-E5D8-EA8CF0E60F0F">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:23:10 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="62974CAE-CE4F-216E-9324-62E96B5258A9" name="T_CONTA_BANCARIA PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:23:48 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A7A181C7-4815-FAD4-6318-7620DAC9BFC1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

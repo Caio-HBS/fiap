@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="RELACAO_USUARIO_OPERACAO" directorySegmentName="seg_0" id="795BB1AC-61C0-20BD-77CE-BE8DE793F718">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:40:22 UTC</createdTime>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<engineerTo>
+<item key="40BCB8FE-FA66-3717-6E69-88D9EF6C9CC3" value="true"/>
+</engineerTo>
+<sourcePk>9CFFF90B-C284-5BDE-59A9-B5CEC000C504</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>48947BC4-34F2-842A-9521-D05A1E39C716</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6E3BCC12-736D-D46A-41F4-5ECC6897907E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

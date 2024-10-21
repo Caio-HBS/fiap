@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E95FEF9B-520C-3EB0-904C-3CC4DEBC49E9" name="T_USUARIO">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>48947BC4-34F2-842A-9521-D05A1E39C716</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_usuario" id="042F466D-375C-15E4-CD99-FC3E79D83389">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>AC2BC026-0F0F-1F08-160E-715B83DCAA2C</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="ABE6E03A-2BCA-BB14-E437-74BCF15A2A2B">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>A67AF4ED-A900-3A23-0E56-52E82324ABEC</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sobrenome" id="50828405-51DD-DFB2-4CE9-27F748871086">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>7513D519-9978-4C70-6283-FDFCACEE5BB1</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_nascimento" id="0C6BB244-F52B-618F-B843-94E9153C7C83">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>1E78EAC6-70AF-64A0-52AF-B24D77D19557</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="E47AAB4D-2E12-AFBC-93A9-3F9112743BF7">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>4F4EAC5C-6E63-C889-D2C1-F72C3326AB2F</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_usuario" id="4FCAAA34-742F-BA50-E98E-3C7156001E2C">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>13B47E4C-5429-E943-6DB3-2B744C29A0AE</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="senha" id="ADE1D434-550B-EC3C-89BE-3351D670848F">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>361F0CB6-B258-9977-F20F-C8288C125BBB</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7B64F85F-D7E0-B905-0DC7-74C96848E3A2" name="T_USUARIO_PK">
+<createdBy>Caio Bianchi</createdBy>
+<createdTime>2024-10-21 14:42:20 UTC</createdTime>
+<generatorID>9CFFF90B-C284-5BDE-59A9-B5CEC000C504</generatorID>
+<ownerDesignName>novo_modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="042F466D-375C-15E4-CD99-FC3E79D83389"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
