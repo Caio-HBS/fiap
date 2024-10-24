@@ -30,6 +30,7 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
+src/main/java/br/com/fiap/fintech/dao/ConnectionManager.java
 
 ### VS Code ###
 .vscode/
