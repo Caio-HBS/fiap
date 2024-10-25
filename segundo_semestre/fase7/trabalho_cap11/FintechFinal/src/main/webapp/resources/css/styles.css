@@ -1,0 +1,14 @@
+.index-cover {
+  background-image: url("../images/index-cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-grey {
+  background-color: #e2e2e2;
+}
+
+.centralize {
+  height: calc(100vh - 56px);
+}
