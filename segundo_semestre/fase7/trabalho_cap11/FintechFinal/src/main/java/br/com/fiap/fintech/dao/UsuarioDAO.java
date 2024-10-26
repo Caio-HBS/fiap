@@ -13,10 +13,14 @@ public interface UsuarioDAO {
 
     Usuario buscarPorId(int id);
 
+    Usuario buscarPorEmail(String email);
+
     Map<Usuario, UsuarioInfo> buscarCompletoPorId(int id);
 
     void atualizar(Usuario usuario) throws DBException;
 
     void remover(int id) throws DBException;
+
+    Usuario validarUsuario(String email, String senha);
 
 }

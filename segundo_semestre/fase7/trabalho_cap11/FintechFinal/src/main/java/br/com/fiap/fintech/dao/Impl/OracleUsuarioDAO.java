@@ -5,6 +5,7 @@ import br.com.fiap.fintech.dao.UsuarioDAO;
 import br.com.fiap.fintech.exception.DBException;
 import br.com.fiap.fintech.model.Usuario;
 import br.com.fiap.fintech.model.UsuarioInfo;
+import br.com.fiap.fintech.util.CriptografiaUtils;
 
 import java.sql.*;
 
@@ -70,15 +71,40 @@ public class OracleUsuarioDAO implements UsuarioDAO {
             rs = stmt.executeQuery();
 
             if (rs.next()) {
-                int idUsuario = rs.getInt("id_usuario");
-                String nome = rs.getString("nome");
-                String sobrenome = rs.getString("sobrenome");
-                LocalDate dtNascimento = rs.getDate("dt_nascimento").toLocalDate();
-                String nmUsuario = rs.getString("nm_usuario");
-                String email = rs.getString("email");
-                String cargo = rs.getString("cargo");
+                usuario = queryParaObjeto(rs);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                stmt.close();
+                conexao.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return usuario;
+    }
 
-                usuario = new Usuario(idUsuario, nome, sobrenome, dtNascimento, email, nmUsuario, null, cargo);
+    @Override
+    public Usuario buscarPorEmail(String email) {
+        Usuario usuario = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            conexao = ConnectionManager.getInstance().getConnection();
+
+            stmt = conexao.prepareStatement(
+                    "SELECT id_usuario, nome, sobrenome, dt_nascimento, email, nm_usuario, cargo FROM " +
+                    "t_usuario WHERE email = ?"
+            );
+            stmt.setString(1, email);
+
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                usuario = queryParaObjeto(rs);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -198,6 +224,52 @@ public class OracleUsuarioDAO implements UsuarioDAO {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public Usuario validarUsuario(String email, String senha) {
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Usuario usuario = null;
+
+        try {
+            conexao = ConnectionManager.getInstance().getConnection();
+
+            stmt = conexao.prepareStatement("SELECT * FROM t_usuario WHERE email = ? AND senha = ?");
+            stmt.setString(1, email);
+            stmt.setString(2, CriptografiaUtils.criptografar(senha));
+
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                usuario = queryParaObjeto(rs);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            throw new RuntimeException(e); // TODO: melhorar isso aqui.
+        } finally {
+            try {
+                stmt.close();
+                conexao.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return usuario;
+    }
+
+    private Usuario queryParaObjeto(ResultSet rs) throws SQLException {
+        int idUsuario = rs.getInt("id_usuario");
+        String nome = rs.getString("nome");
+        String sobrenome = rs.getString("sobrenome");
+        LocalDate dtNascimento = rs.getDate("dt_nascimento").toLocalDate();
+        String nmUsuario = rs.getString("nm_usuario");
+        String email = rs.getString("email");
+        String cargo = rs.getString("cargo");
+
+        return new Usuario(idUsuario, nome, sobrenome, dtNascimento, email, nmUsuario, "DUMMY", cargo);
     }
 
 }

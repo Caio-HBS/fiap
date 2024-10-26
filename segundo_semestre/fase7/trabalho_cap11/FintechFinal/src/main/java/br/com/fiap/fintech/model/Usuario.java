@@ -1,5 +1,7 @@
 package br.com.fiap.fintech.model;
 
+import br.com.fiap.fintech.util.CriptografiaUtils;
+
 import java.time.LocalDate;
 
 public class Usuario {
@@ -25,7 +27,7 @@ public class Usuario {
         this.dataNascimento = dataNascimento;
         this.email = email;
         this.nomeUsuario = nomeUsuario;
-        this.senha = senha;
+        setSenha(senha);
         this.cargo = cargo;
     }
 
@@ -39,7 +41,7 @@ public class Usuario {
         this.dataNascimento = dataNascimento;
         this.email = email;
         this.nomeUsuario = nomeUsuario;
-        this.senha = senha;
+        setSenha(senha);
         this.cargo = cargo;
     }
 
@@ -96,7 +98,11 @@ public class Usuario {
     }
 
     public void setSenha(String senha) {
-        this.senha = senha;
+        try {
+            this.senha = CriptografiaUtils.criptografar(senha);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public String getCargo() {
