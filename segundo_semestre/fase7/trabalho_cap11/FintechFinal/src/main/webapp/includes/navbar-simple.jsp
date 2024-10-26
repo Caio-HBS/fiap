@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-dark">
   <!-- TODO: adicionar links -->
   <div class="container-fluid">
-    <a class="navbar-brand text-white" href="#"><b>Fintech</b></a>
+    <a class="navbar-brand text-white" href="index.jsp"><b>Fintech</b></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="#"
+          <a class="nav-link active text-white" aria-current="page" href="noticias.jsp"
             >Not&iacute;cias</a
           >
         </li>
