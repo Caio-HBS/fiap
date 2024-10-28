@@ -1,4 +1,4 @@
-package br.com.fiap.fintech.dao.Impl;
+package br.com.fiap.fintech.dao.impl;
 
 import br.com.fiap.fintech.dao.ConnectionManager;
 import br.com.fiap.fintech.dao.UsuarioInfoDAO;
