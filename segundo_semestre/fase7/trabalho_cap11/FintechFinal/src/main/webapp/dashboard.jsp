@@ -1,5 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %> 
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<fmt:setLocale value="pt_BR"/>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -16,18 +19,66 @@
       <div class="row justify-content-around">
         <div class="col col-12 col-sm-3 bg-dark-subtle rounded-5 mt-1 mt-sm-0 d-none d-sm-block">
           <p><b>&Uacute;ltimo investimento</b></p>
-          <p class="h1 pt-2">R$438,98</p>
-          <p>Nome do investimento</p>
+          <c:choose>
+            <c:when test="${not empty info}">
+              <p class="h1 pt-2">
+                <fmt:formatNumber value="${info.valorUltimoInvestimento}" type="currency" currencySymbol="R$" groupingUsed="true" maxFractionDigits="2" minFractionDigits="2"/>
+              </p>
+              <p>${fn:length(info.nmUltimoInvestimento) == 0 ? "Nenhum investimento." :
+              (fn:length(info.nmUltimoInvestimento) > 20 ?
+              fn:substring(info.nmUltimoInvestimento, 0, 20) :
+              info.nmUltimoInvestimento)}</p>
+            </c:when>
+            <c:otherwise>
+              <c:set var="noInv" value="0.0" scope="page"/>
+              <p class="h1">
+                <fmt:formatNumber value="${noInv}" type="currency" currencySymbol="R$" groupingUsed="true" maxFractionDigits="2" minFractionDigits="2"/>
+              </p>
+              <p>Nenhum investimento.</p>
+            </c:otherwise>
+          </c:choose>
         </div>
         <div class="col col-12 col-sm-3 bg-dark-subtle rounded-5 mt-1 mt-sm-0">
           <p><b>&Uacute;ltima despesa</b></p>
-          <p class="h1 pt-2">R$438,98</p>
-          <p>Nome da despesa</p>
+          <c:choose>
+            <c:when test="${not empty info}">
+              <p class="h1 pt-2">
+                <fmt:formatNumber value="${info.valorUltimaDespesa}" type="currency" currencySymbol="R$" groupingUsed="true" maxFractionDigits="2" minFractionDigits="2"/>
+              </p>
+              <p>${fn:length(info.nmUltimaDespesa) == 0 ? "Nenhuma despesa." :
+                  (fn:length(info.nmUltimaDespesa) > 20 ?
+                      fn:substring(info.nmUltimaDespesa, 0, 20) :
+                      info.nmUltimaDespesa)}</p>
+            </c:when>
+            <c:otherwise>
+              <c:set var="noInv" value="0.0" scope="page"/>
+              <p class="h1">
+                <fmt:formatNumber value="${noInv}" type="currency" currencySymbol="R$" groupingUsed="true" maxFractionDigits="2" minFractionDigits="2"/>
+              </p>
+              <p>Nenhuma despesa.</p>
+            </c:otherwise>
+          </c:choose>
         </div>
         <div class="col col-12 col-sm-3 bg-dark-subtle rounded-5 mt-1 mt-sm-0 d-none d-sm-block">
           <p><b>&Uacute;ltima receita</b></p>
-          <p class="h1 pt-2">R$438,98</p>
-          <p>Nome da receita</p>
+          <c:choose>
+            <c:when test="${not empty info}">
+              <p class="h1 pt-2">
+                <fmt:formatNumber value="${info.valorUltimaReceita}" type="currency" currencySymbol="R$" groupingUsed="true" maxFractionDigits="2" minFractionDigits="2"/>
+              </p>
+              <p>${fn:length(info.nmUltimaReceita) == 0 ? "Nenhuma despesa." :
+                  (fn:length(info.nmUltimaReceita) > 20 ?
+                      fn:substring(info.nmUltimaReceita, 0, 20) :
+                      info.nmUltimaReceita)}</p>
+            </c:when>
+            <c:otherwise>
+              <c:set var="noInv" value="0.0" scope="page"/>
+              <p class="h1">
+                <fmt:formatNumber value="${noInv}" type="currency" currencySymbol="R$" groupingUsed="true" maxFractionDigits="2" minFractionDigits="2"/>
+              </p>
+              <p>Nenhuma despesa.</p>
+            </c:otherwise>
+          </c:choose>
         </div>
       </div>
     </section>
