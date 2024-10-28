@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user", email);
             session.setAttribute("userId", usuario.getIdUsuario());
 
-            req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
+            resp.sendRedirect(req.getContextPath() + "/dashboard");
         } else {
             req.setAttribute("erro", "Usuário e/ou senha inválidos.");
             req.getRequestDispatcher("login.jsp").forward(req, resp);
