@@ -12,3 +12,14 @@
 .centralize {
   height: calc(100vh - 56px);
 }
+
+.error-title {
+  font-family: "Iceberg", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8rem;
+}
+
+.error-message {
+  text-align: center;
+}
