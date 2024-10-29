@@ -245,10 +245,8 @@ public class OracleUsuarioDAO implements UsuarioDAO {
                 usuario = queryParaObjeto(rs);
             }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
         } catch (Exception e) {
-            throw new RuntimeException(e); // TODO: melhorar isso aqui.
+            e.printStackTrace();
         } finally {
             try {
                 stmt.close();

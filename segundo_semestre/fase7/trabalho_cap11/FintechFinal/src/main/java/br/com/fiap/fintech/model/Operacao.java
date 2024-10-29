@@ -17,6 +17,20 @@ public class Operacao {
     }
 
     public Operacao(
+            int idOperacao, int idUsuario, String nomeOperacao, String descricaoOperacao, LocalDate dataRegistro,
+            LocalDate dataOperacao, double valorOperacao, char tipoOperacao
+    ) {
+        this.idOperacao = idOperacao;
+        this.idUsuario = idUsuario;
+        this.nomeOperacao = nomeOperacao;
+        this.descricaoOperacao = descricaoOperacao;
+        this.dataRegistro = dataRegistro;
+        this.dataOperacao = dataOperacao;
+        this.valorOperacao = valorOperacao;
+        this.tipoOperacao = tipoOperacao;
+    }
+
+    public Operacao(
             int idUsuario, String nomeOperacao, String descricaoOperacao, LocalDate dataRegistro,
             LocalDate dataOperacao, double valorOperacao, char tipoOperacao
     ) {
