@@ -3,7 +3,6 @@ package br.com.fiap.fintech.controller;
 import br.com.fiap.fintech.dao.UsuarioDAO;
 import br.com.fiap.fintech.factory.DAOFactory;
 import br.com.fiap.fintech.model.Usuario;
-import br.com.fiap.fintech.util.CriptografiaUtils;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

@@ -5,7 +5,6 @@ import br.com.fiap.fintech.dao.DashboardInfoDAO;
 import br.com.fiap.fintech.model.DashboardInfo;
 
 import java.sql.*;
-import java.time.LocalDate;
 
 public class OracleDashboardInfoDAO implements DashboardInfoDAO {
 

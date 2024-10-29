@@ -11,6 +11,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.Period;
 
 @WebServlet("/dashboard")
 public class DashboardServlet extends HttpServlet {
@@ -25,14 +27,30 @@ public class DashboardServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        System.out.println(session.getAttribute("userId"));
 
         DashboardInfo info = dashboardDAO.buscarDashboardInfo((Integer) session.getAttribute("userId"));
 
         if (info != null) {
-            session.setAttribute("info", info);
+            req.setAttribute("info", info);
+            // Checa se há algum investimento antes de chamar a função.
+            if (info.getValorUltimoInvestimento() != 0.0) {
+                double rend = calcularRendimento(info);
+                req.setAttribute("rend", rend);
+            }
         }
-        System.out.println(info);
+
         req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
     }
+
+    private double calcularRendimento(DashboardInfo info) {
+        LocalDate inicioInv = info.getDtInicioUltimoInvestimento();
+        LocalDate hoje = LocalDate.now();
+
+        Period period = Period.between(inicioInv, hoje);
+        int difMeses = period.getYears() * 12 + period.getMonths();
+
+        return info.getValorUltimoInvestimento() * Math.pow(1 + ((double) info.getPercentUltimoInvestimento() / 100),
+                difMeses);
+    }
+
 }
