@@ -26,6 +26,7 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
+
         session.invalidate();
         request.getRequestDispatcher("index.jsp").forward(request, response);
 
@@ -33,6 +34,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String email = req.getParameter("email-login");
         String senha = req.getParameter("senha-login");
 
@@ -48,5 +50,6 @@ public class LoginServlet extends HttpServlet {
             req.setAttribute("erro", "Usuário e/ou senha inválidos.");
             req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
+
     }
 }
