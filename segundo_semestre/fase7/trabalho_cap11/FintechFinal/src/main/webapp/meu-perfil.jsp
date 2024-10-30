@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="resources/css/bootstrap.min.css" />
     <link rel="stylesheet" href="resources/css/styles.css" />
+    <link rel="shortcut icon" href="./resources/favicon.png" type="image/png" />
   </head>
   <body class="index-cover">
     <%@include file="includes/navbar.jsp" %>
@@ -14,8 +15,11 @@
         class="container d-flex justify-content-center align-items-center centralize"
     >
       <div class="col-12 col-md-6 col-lg-4">
+        <c:if test="${not empty error}">
+          <p class="text-center text-danger">${erro}</p>
+        </c:if>
         <form
-            action="register"
+            action="meu-perfil"
             method="post"
             class="text-white bg-light-subtle p-3 rounded-3 needs-validation"
         >
@@ -24,17 +28,17 @@
             <input
                 type="text"
                 class="form-control"
-                name="nome-registro"
+                name="nome-novo"
                 maxlength="30"
-                placeholder="Seu nome"
+                value="${usuario.nome}"
                 readonly
             />
             <input
                 type="text"
                 class="form-control ms-3"
-                name="sobrenome-registro"
+                name="sobrenome-novo"
                 maxlength="30"
-                placeholder="Seu sobrenome"
+                value="${usuario.sobrenome}"
                 readonly
             />
           </div>
@@ -42,9 +46,9 @@
             <input
                 type="email"
                 class="form-control"
-                name="email-registro"
+                name="email-novo"
                 maxlength="50"
-                placeholder="Seu e-mail"
+                value="${usuario.email}"
                 required
             />
           </div>
@@ -53,9 +57,9 @@
             <input
                 type="text"
                 class="form-control"
-                name="nome-usuario-registro"
+                name="nome-usuario-novo"
                 maxlength="20"
-                placeholder="Seu nome de usu&aacute;rio"
+                value="${usuario.nomeUsuario}"
                 required
             />
           </div>
@@ -63,15 +67,17 @@
             <input
                 type="date"
                 class="form-control"
-                name="dt-nascimento-registro"
-                required
+                name="dt-nascimento-novo"
+                value="${usuario.dataNascimento}"
+                readonly
             />
             <div class="input-group-text ms-3">
               <input
                   class="form-check-input mt-0"
                   type="checkbox"
                   value="true"
-                  name="novidades-registro"
+                  name="novidades-novo"
+                  ${info.enviarNovidades.toString() == "Y" ? "checked" : ""}
               />
             </div>
             <input
@@ -85,7 +91,7 @@
             <input
                 type="password"
                 class="form-control"
-                name="senha-registro"
+                name="senha-novo"
                 maxlength="20"
                 placeholder="Sua senha"
                 required
@@ -93,28 +99,30 @@
             <input
                 type="password"
                 class="form-control ms-3"
-                name="senha-confirmar-registro"
+                name="senha-confirmar-novo"
                 maxlength="20"
                 placeholder="Confirme sua senha"
                 required
             />
           </div>
           <div class="d-flex mb-3">
-            <select class="form-select" name="pronomes-registro">
-              <option selected disabled>Seus pronomes</option>
-              <option value="Ele/Dele">Ele/Dele</option>
-              <option value="Ela/Dela">Ela/dela</option>
-              <option value="">Outros</option>
+            <select class="form-select" name="pronomes-novo">
+              <option disabled>Seus pronomes</option>
+              <option value="Ele/Dele" ${info.pronomes == "Ele/Dele" ? "selected" : ""}>Ele/Dele</option>
+              <option value="Ela/Dela" ${info.pronomes == "Ela/Dela" ? "selected" : ""}>Ela/dela</option>
+              <option value="Outros" ${info.pronomes == "Outros" ? "selected" : ""}>Outros</option>
             </select>
             <input
                 type="text"
                 class="form-control ms-3"
-                id="apelido-registro"
+                id="apelido-novo"
+                name="apelido-novo"
+                value="${info.apelido}"
                 placeholder="Seu apelido"
             />
           </div>
           <div class="text-end">
-            <button type="submit" class="btn btn-success btn-lg ms-3">
+            <button class="btn btn-success btn-lg ms-3">
               <b>Atualizar</b>
             </button>
           </div>

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,9 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./resources/css/styles.css" />
+    <link rel="shortcut icon" href="./resources/favicon.png" type="image/png" />
   </head>
   <body class="d-flex flex-column min-vh-100 index-cover">
-    <%@include file="includes/navbar.jsp" %>
+    <c:choose>
+      <c:when test="${not empty user}">
+        <%@include file="includes/navbar.jsp" %>
+      </c:when>
+      <c:otherwise>
+        <%@include file="includes/navbar-simple.jsp" %>
+      </c:otherwise>
+    </c:choose>
     <main class="container">
       <div
         class="d-flex flex-column justify-content-center align-items-center vh-100"

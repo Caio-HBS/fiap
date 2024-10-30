@@ -11,6 +11,7 @@
     <title>Fintech | Opera&ccedil;&otilde;es</title>
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./resources/css/styles.css" />
+    <link rel="shortcut icon" href="./resources/favicon.png" type="image/png" />
   </head>
   <body class="d-flex flex-column min-vh-100">
     <div class="modal fade" id="novaOperacao" tabindex="-1" aria-hidden="true">
