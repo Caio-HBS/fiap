@@ -54,7 +54,7 @@ public class OperacaoServlet extends HttpServlet {
             case "atualizar":
                 String nmOperacao = req.getParameter("nome-operacao");
                 String descOperacao = req.getParameter("desc-operacao");
-                char tipoOperacao = Objects.equals(req.getParameter("tipo-operacao"), "R") ? 'R' : 'S';
+                char tipoOperacao = Objects.equals(req.getParameter("tipo-operacao"), "R") ? 'R' : 'D';
                 LocalDate dataOperacao = Date.valueOf(req.getParameter("data-operacao")).toLocalDate();
                 double valorOperacao = Double.parseDouble(req.getParameter("valor-operacao"));
 

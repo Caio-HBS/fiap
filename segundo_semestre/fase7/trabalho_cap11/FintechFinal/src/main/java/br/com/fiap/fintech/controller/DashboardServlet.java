@@ -34,7 +34,7 @@ public class DashboardServlet extends HttpServlet {
             req.setAttribute("info", info);
             // Checa se há algum investimento antes de chamar a função.
             if (info.getValorUltimoInvestimento() != 0.0) {
-                double rend = calcularRendimento(info);
+                String rend = calcularRendimento(info);
                 req.setAttribute("rend", rend);
             }
         }
@@ -42,15 +42,24 @@ public class DashboardServlet extends HttpServlet {
         req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
     }
 
-    private double calcularRendimento(DashboardInfo info) {
+    private String calcularRendimento(DashboardInfo info) {
         LocalDate inicioInv = info.getDtInicioUltimoInvestimento();
         LocalDate hoje = LocalDate.now();
 
         Period period = Period.between(inicioInv, hoje);
         int difMeses = period.getYears() * 12 + period.getMonths();
 
-        return info.getValorUltimoInvestimento() * Math.pow(1 + ((double) info.getPercentUltimoInvestimento() / 100),
-                difMeses);
+        double resultado = (
+                info.getValorUltimoInvestimento() * Math.pow(1 + ((double) info.getPercentUltimoInvestimento() / 100),
+                difMeses)
+        );
+
+        String rend = String.valueOf((int) resultado);
+        if (rend.length() <= 5) {
+            return rend;
+        } else {
+            return rend.substring(0, 6);
+        }
     }
 
 }

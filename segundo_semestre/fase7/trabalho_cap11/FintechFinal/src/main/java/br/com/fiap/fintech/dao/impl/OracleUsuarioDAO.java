@@ -63,7 +63,7 @@ public class OracleUsuarioDAO implements UsuarioDAO {
             conexao = ConnectionManager.getInstance().getConnection();
 
             stmt = conexao.prepareStatement(
-                    "SELECT (id_usuario, nome, sobrenome, dt_nascimento, email, nm_usuario, cargo) from " +
+                    "SELECT id_usuario, nome, sobrenome, dt_nascimento, email, nm_usuario, cargo FROM " +
                     "t_usuario WHERE id_usuario = ?"
             );
             stmt.setInt(1, id);
@@ -96,7 +96,7 @@ public class OracleUsuarioDAO implements UsuarioDAO {
             conexao = ConnectionManager.getInstance().getConnection();
 
             stmt = conexao.prepareStatement(
-                    "SELECT id_usuario, nome, sobrenome, dt_nascimento, email, nm_usuario, cargo FROM " +
+                    "SELECT (id_usuario, nome, sobrenome, dt_nascimento, email, nm_usuario, cargo) FROM " +
                     "t_usuario WHERE email = ?"
             );
             stmt.setString(1, email);
@@ -185,6 +185,7 @@ public class OracleUsuarioDAO implements UsuarioDAO {
             stmt.setString(4, usuario.getEmail());
             stmt.setString(5, usuario.getNomeUsuario());
             stmt.setString(6, usuario.getSenha());
+            stmt.setInt(7, usuario.getIdUsuario());
 
             stmt.executeQuery();
 
