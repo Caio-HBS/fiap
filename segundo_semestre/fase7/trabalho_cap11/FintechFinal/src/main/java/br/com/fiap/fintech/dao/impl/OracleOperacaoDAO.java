@@ -120,6 +120,7 @@ public class OracleOperacaoDAO implements OperacaoDAO {
 
     @Override
     public void atualizar(Operacao operacaoAtualizada) throws DBException {
+
         PreparedStatement stmt = null;
 
         try {
@@ -158,6 +159,7 @@ public class OracleOperacaoDAO implements OperacaoDAO {
 
     @Override
     public void remover(int idOperacao, int idUsuario) throws DBException {
+
         PreparedStatement stmt = null;
 
         try {
@@ -172,7 +174,7 @@ public class OracleOperacaoDAO implements OperacaoDAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            throw new DBException("Erro ao remover operação.");
+            throw new DBException("Erro ao remover operação");
         } finally {
             try {
                 stmt.close();

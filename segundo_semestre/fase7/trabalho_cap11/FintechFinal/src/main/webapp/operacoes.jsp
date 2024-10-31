@@ -101,7 +101,7 @@
     <%@include file="includes/navbar.jsp" %>
     <main class="container">
       <div class="my-3">
-        <h1 class="mb-0"><b>Minhas operações</b></h1>
+        <h1 class="mb-0"><b>Minhas opera&ccedil;&otilde;es</b></h1>
       </div>
       <div class="d-flex justify-content-between align-items-center">
         <div>
@@ -122,7 +122,7 @@
             <input
               class="ms-0 input-group-text"
               type="text"
-              placeholder="Buscar operação"
+              placeholder="Buscar"
             />
           </div>
         </div>
@@ -184,7 +184,7 @@
           </table>
         </c:when>
         <c:otherwise>
-          <p class="h1 text-center pt-5">Você ainda não tem nenhuma operação cadastrada</p>
+          <p class="h1 text-center pt-5">Voc&ecirc; ainda n&atilde;o tem nenhuma opera&cedil;&atilde;o cadastrada</p>
         </c:otherwise>
       </c:choose>
     </main>

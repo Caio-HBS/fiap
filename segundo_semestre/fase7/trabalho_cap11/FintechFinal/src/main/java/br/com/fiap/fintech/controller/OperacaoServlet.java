@@ -45,6 +45,7 @@ public class OperacaoServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         HttpSession session = req.getSession();
         int idOperacao = Integer.parseInt(req.getParameter("id"));
         int idUsuario = (Integer) session.getAttribute("userId");
@@ -62,17 +63,17 @@ public class OperacaoServlet extends HttpServlet {
                         idOperacao, idUsuario, nmOperacao, descOperacao, LocalDate.now(), dataOperacao, valorOperacao,
                         tipoOperacao
                 );
-                System.out.println(opAtualizada);
+
                 try {
                     operacaoDAO.atualizar(opAtualizada);
-                    System.out.println("Foi atualizado");
+
                     resp.sendRedirect(req.getContextPath() + "/operacoes");
                 } catch (DBException e) {
                     req.setAttribute("erro", e.getMessage());
                     req.getRequestDispatcher("atualizar-operacao.jsp").forward(req, resp);
                 }
-
                 break;
+
             case "deletar":
                 try {
                     operacaoDAO.remover(idOperacao, idUsuario);
@@ -83,10 +84,12 @@ public class OperacaoServlet extends HttpServlet {
                     req.getRequestDispatcher("atualizar-operacao.jsp").forward(req, resp);
                 }
                 break;
+
             default:
                 req.setAttribute("erro", "Erro inesperado. Entre em contato com o administrador.");
                 req.getRequestDispatcher("atualizar-operacao.jsp").forward(req, resp);
         }
+
     }
 
 }

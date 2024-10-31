@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand text-white" href="/">Fintech</a>
+    <a class="navbar-brand text-white" href="/fintech">Fintech</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <svg
@@ -26,11 +26,12 @@
           <a class="nav-link text-white" href="../investimentos.jsp">Investimentos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="../operacoes.jsp">Opera&ccedil;&otilde;es</a>
+          <a class="nav-link text-white" href="operacoes">Opera&ccedil;&otilde;es</a>
         </li>
       </ul>
       <c:if test="${not empty user}">
-        <form class="d-flex" action="login" method="get">
+        <a href="meu-perfil" class="btn btn-info">Meu perfil</a>
+        <form class="ms-2 d-flex" action="login" method="get">
           <button class="btn btn-danger" type="submit">Logout</button>
         </form>
       </c:if>

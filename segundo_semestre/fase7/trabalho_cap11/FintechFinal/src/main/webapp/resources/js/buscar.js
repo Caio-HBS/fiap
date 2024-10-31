@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.querySelector('input[placeholder="Buscar operação"]');
+    const searchInput = document.querySelector('input[placeholder="Buscar"]');
     const tableRows = document.querySelectorAll("table tbody tr");
 
     searchInput.addEventListener("input", function () {
