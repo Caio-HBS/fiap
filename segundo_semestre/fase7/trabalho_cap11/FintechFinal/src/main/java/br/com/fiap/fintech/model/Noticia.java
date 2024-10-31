@@ -9,15 +9,38 @@ public class Noticia {
     private LocalDate dataPublicacao;
     private String titulo;
     private String texto;
+    private String resumo;
+    private String imagem;
+    private String imagemAlt;
 
     public Noticia() {
     }
 
-    public Noticia(int idUsuario, LocalDate dataPublicacao, String titulo, String texto) {
+    public Noticia(
+            int idUsuario, LocalDate dataPublicacao, String titulo, String texto,
+            String resumo, String imagem, String imagemAlt
+    ) {
         this.idUsuario = idUsuario;
         this.dataPublicacao = dataPublicacao;
         this.titulo = titulo;
         this.texto = texto;
+        this.resumo = resumo;
+        this.imagem = imagem;
+        this.imagemAlt = imagemAlt;
+    }
+
+    public Noticia(
+            int idNoticia, int idUsuario, LocalDate dataPublicacao, String titulo,
+            String texto, String resumo, String imagem, String imagemAlt
+    ) {
+        this.idNoticia = idNoticia;
+        this.idUsuario = idUsuario;
+        this.dataPublicacao = dataPublicacao;
+        this.titulo = titulo;
+        this.texto = texto;
+        this.resumo = resumo;
+        this.imagem = imagem;
+        this.imagemAlt = imagemAlt;
     }
 
     public int getIdNoticia() {
@@ -60,6 +83,30 @@ public class Noticia {
         this.texto = texto;
     }
 
+    public String getResumo() {
+        return resumo;
+    }
+
+    public void setResumo(String resumo) {
+        this.resumo = resumo;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
+    public String getImagemAlt() {
+        return imagemAlt;
+    }
+
+    public void setImagemAlt(String imagemAlt) {
+        this.imagemAlt = imagemAlt;
+    }
+
     @Override
     public String toString() {
         return "Noticia{" +
@@ -67,6 +114,10 @@ public class Noticia {
                ", idUsuario=" + idUsuario +
                ", dataPublicacao=" + dataPublicacao +
                ", titulo='" + titulo + '\'' +
+               ", texto='" + texto + '\'' +
+               ", resumo='" + resumo + '\'' +
+               ", imagem='" + imagem + '\'' +
+               ", imagemAlt='" + imagemAlt + '\'' +
                '}';
     }
 

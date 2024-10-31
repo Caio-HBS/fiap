@@ -91,7 +91,7 @@
             <input
                 type="password"
                 class="form-control"
-                name="senha-novo"
+                name="senha-registro"
                 maxlength="20"
                 placeholder="Sua senha"
                 required
@@ -99,7 +99,7 @@
             <input
                 type="password"
                 class="form-control ms-3"
-                name="senha-confirmar-novo"
+                name="senha-confirmar-registro"
                 maxlength="20"
                 placeholder="Confirme sua senha"
                 required
