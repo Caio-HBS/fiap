@@ -29,6 +29,20 @@ public class Investimento {
         this.percentMensal = percentMensal;
     }
 
+    public Investimento(
+            int idInvestimento, int idUsuario, String nomeInvestimento, String descricaoInvestimento,
+            LocalDate dataInicio, LocalDate dataTermino, double valorInicial, int percentMensal
+    ) {
+        this.idInvestimento = idInvestimento;
+        this.idUsuario = idUsuario;
+        this.nomeInvestimento = nomeInvestimento;
+        this.descricaoInvestimento = descricaoInvestimento;
+        this.dataInicio = dataInicio;
+        this.dataTermino = dataTermino;
+        this.valorInicial = valorInicial;
+        this.percentMensal = percentMensal;
+    }
+
     public int getIdInvestimento() {
         return idInvestimento;
     }
