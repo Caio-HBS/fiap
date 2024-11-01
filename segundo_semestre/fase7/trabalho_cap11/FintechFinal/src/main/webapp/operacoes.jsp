@@ -184,7 +184,7 @@
           </table>
         </c:when>
         <c:otherwise>
-          <p class="h1 text-center pt-5">Voc&ecirc; ainda n&atilde;o tem nenhuma opera&cedil;&atilde;o cadastrada</p>
+          <p class="h1 text-center pt-5">Voc&ecirc; ainda n&atilde;o tem nenhuma opera&ccedil;&atilde;o cadastrada</p>
         </c:otherwise>
       </c:choose>
     </main>
