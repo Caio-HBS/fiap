@@ -4,6 +4,7 @@ import br.com.fiap.fintech.dao.InvestimentoDAO;
 import br.com.fiap.fintech.exception.DBException;
 import br.com.fiap.fintech.factory.DAOFactory;
 import br.com.fiap.fintech.model.Investimento;
+import br.com.fiap.fintech.util.InvestimentoUtils;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -14,6 +15,7 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/investimentos")
@@ -32,11 +34,19 @@ public class InvestimentosServlet  extends HttpServlet {
         HttpSession session = req.getSession();
 
         List<Investimento> investimentos = investimentoDAO.listar((Integer) session.getAttribute("userId"));
+        List<String> rends = new ArrayList<>();
 
         if (investimentos != null) {
             req.setAttribute("investimentos", investimentos);
-        }
 
+            for (Investimento inv: investimentos) {
+                String rend = InvestimentoUtils.calcularRendimento(
+                        inv.getValorInicial(), inv.getPercentMensal(), inv.getDataInicio()
+                );
+                rends.add(rend);
+            }
+            req.setAttribute("rendimentos", rends);
+        }
         req.getRequestDispatcher("investimentos.jsp").forward(req, resp);
 
     }
@@ -68,4 +78,5 @@ public class InvestimentosServlet  extends HttpServlet {
         }
 
     }
+
 }

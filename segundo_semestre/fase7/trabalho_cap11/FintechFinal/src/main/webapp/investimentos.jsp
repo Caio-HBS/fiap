@@ -122,7 +122,7 @@
             </button>
             <input
               class="ms-0 input-group-text"
-              type="text"
+              type="search"
               placeholder="Buscar"
             />
           </div>
@@ -145,11 +145,12 @@
                 <th>VALOR INICIAL</th>
                 <th class="d-none d-lg-table-cell">DATA IN&Iacute;CIO</th>
                 <th class="d-none d-lg-table-cell">PERCENTUAL (MENSAL)</th>
+                <th class="d-none d-lg-table-cell">RENDIMENTO</th>
                 <th>EDITAR</th>
               </tr>
             </thead>
             <tbody class="lead">
-              <c:forEach items="${investimentos}" var="inv">
+              <c:forEach items="${investimentos}" var="inv" varStatus="status">
                 <tr>
                   <td class="d-none d-lg-table-cell">${inv.idInvestimento}</td>
                   <td>${fn:length(inv.nomeInvestimento) > 10 ? fn:substring(inv.nomeInvestimento, 0, 10) : inv.nomeInvestimento}</td>
@@ -164,6 +165,16 @@
                   <fmt:parseDate value="${inv.dataInicio.toString()}" pattern="yyyy-MM-dd" var="dataFormatada" />
                   <td class="d-none d-lg-table-cell"><fmt:formatDate value="${dataFormatada}" pattern="dd/MM/yyyy" /></td>
                   <td class="d-none d-lg-table-cell">${inv.percentMensal}%</td>
+                  <td class="d-none d-lg-table-cell">
+                    <fmt:formatNumber
+                        value="${rendimentos.get(status.index)}"
+                        type="currency"
+                        currencySymbol="R$"
+                        groupingUsed="true"
+                        maxFractionDigits="2"
+                        minFractionDigits="2"
+                    />
+                  </td>
                   <td>
                     <a href="investimento?id=${inv.idInvestimento}" class="text-decoration-none text-black">
                     <svg
