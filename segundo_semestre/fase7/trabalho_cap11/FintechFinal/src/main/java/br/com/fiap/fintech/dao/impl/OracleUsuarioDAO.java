@@ -96,10 +96,43 @@ public class OracleUsuarioDAO implements UsuarioDAO {
             conexao = ConnectionManager.getInstance().getConnection();
 
             stmt = conexao.prepareStatement(
-                    "SELECT (id_usuario, nome, sobrenome, dt_nascimento, email, nm_usuario, cargo) FROM " +
+                    "SELECT id_usuario, nome, sobrenome, dt_nascimento, email, nm_usuario, cargo FROM " +
                     "t_usuario WHERE email = ?"
             );
             stmt.setString(1, email);
+
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                usuario = queryParaObjeto(rs);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                stmt.close();
+                conexao.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return usuario;
+    }
+
+    @Override
+    public Usuario buscarPorNmUsuario(String nmUsuario) {
+        Usuario usuario = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            conexao = ConnectionManager.getInstance().getConnection();
+
+            stmt = conexao.prepareStatement(
+                    "SELECT id_usuario, nome, sobrenome, dt_nascimento, email, nm_usuario, cargo FROM " +
+                    "t_usuario WHERE nm_usuario = ?"
+            );
+            stmt.setString(1, nmUsuario);
 
             rs = stmt.executeQuery();
 

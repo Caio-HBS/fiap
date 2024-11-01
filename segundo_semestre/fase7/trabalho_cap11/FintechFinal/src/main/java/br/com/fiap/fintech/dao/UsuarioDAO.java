@@ -15,6 +15,8 @@ public interface UsuarioDAO {
 
     Usuario buscarPorEmail(String email);
 
+    Usuario buscarPorNmUsuario(String nmUsuario);
+
     Map<Usuario, UsuarioInfo> buscarCompletoPorId(int id);
 
     void atualizar(Usuario usuario) throws DBException;
