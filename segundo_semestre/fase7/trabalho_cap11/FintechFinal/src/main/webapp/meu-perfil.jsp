@@ -129,7 +129,7 @@
         </form>
       </div>
     </main>
-    <script src="resources/js/script.js"></script>
+    <script src="resources/js/validar.js"></script>
     <script src="resources/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

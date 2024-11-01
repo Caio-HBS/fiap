@@ -52,7 +52,7 @@
               required
             />
           </div>
-          <div class="input-group mb-3">
+          <div class="input-group mb-1">
             <span class="input-group-text" id="basic-addon1">@</span>
             <input
               type="text"
@@ -63,10 +63,12 @@
               required
             />
           </div>
+          <label for="dt-nascimento-registro" class="text-black-50">Data de nascimento</label>
           <div class="input-group mb-3">
             <input
               type="date"
               class="form-control"
+              id="dt-nascimento-registro"
               name="dt-nascimento-registro"
               required
             />
@@ -126,7 +128,7 @@
         </form>
       </div>
     </main>
-    <script src="resources/js/script.js"></script>
+    <script src="resources/js/validar.js"></script>
     <script src="resources/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
