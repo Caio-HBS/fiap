@@ -17,6 +17,35 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * Servlet responsável pelo registro de novos usuários na plataforma.
+ * <p>
+ * Este servlet gerencia o processo de registro, permitindo que novos usuários criem uma conta
+ * fornecendo suas informações pessoais e preferências. Utiliza <code>UsuarioDAO</code> e <code>UsuarioInfoDAO</code>
+ * para interagir com o banco de dados.
+ * </p>
+ *
+ * <p>URL do servlet: <code>/register</code></p>
+ *
+ * <p>Funcionalidades:</p>
+ * <ul>
+ *     <li><strong>GET</strong>: Exibe a página de registro (<code>register.jsp</code>) se o usuário
+ *     não estiver autenticado. Se já estiver logado, redireciona para o dashboard.</li>
+ *     <li><strong>POST</strong>: Processa o registro de um novo usuário. Verifica se o e-mail e nome
+ *     de usuário já estão cadastrados. Se sim, exibe uma mensagem de erro; caso contrário, cria o novo
+ *     usuário e suas informações adicionais e redireciona para a página de login.</li>
+ * </ul>
+ *
+ * <p>Exceções Tratadas:</p>
+ * <ul>
+ *     <li><code>DBException</code>: Captura falhas ao registrar um novo usuário ou suas informações,
+ *     exibindo uma mensagem de erro e retornando à página de registro.</li>
+ * </ul>
+ *
+ * @see HttpServlet
+ * @see UsuarioDAO
+ * @see UsuarioInfoDAO
+ */
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
 
@@ -31,21 +60,27 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         HttpSession session = req.getSession();
 
         if (session.getAttribute("user") != null) {
             resp.sendRedirect(req.getContextPath() + "/dashboard");
         }
+        req.getRequestDispatcher("register.jsp").forward(req, resp);
 
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Usuario checagemUsuario = usuarioDAO.buscarPorEmail(req.getParameter("email-registro"));
+        Usuario checagemEmail = usuarioDAO.buscarPorEmail(req.getParameter("email-registro"));
+        Usuario checagemNmUsuario = usuarioDAO.buscarPorNmUsuario(req.getParameter("nome-usuario-registro"));
 
-        if (checagemUsuario != null) {
-            req.setAttribute("erro", "E-mail já cadastrado.");
+        if (checagemEmail != null) {
+            req.setAttribute("erro", "E-mail j&aacute; cadastrado.");
+            req.getRequestDispatcher("register.jsp").forward(req, resp);
+        } else if (checagemNmUsuario != null) {
+            req.setAttribute("erro", "Nome de usu&aacute;rio j&aacute; cadastrado.");
             req.getRequestDispatcher("register.jsp").forward(req, resp);
         } else {
             String nome = req.getParameter("nome-registro");

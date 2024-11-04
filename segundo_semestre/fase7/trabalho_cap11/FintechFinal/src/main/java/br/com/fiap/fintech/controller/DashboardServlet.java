@@ -13,6 +13,19 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
+/**
+ * Servlet responsável por exibir o painel de controle do usuário.
+ * <p>
+ * Esta classe carrega as informações do usuário para a visualização do dashboard,
+ * incluindo dados de último investimento e o rendimento estimado.
+ * </p>
+ *
+ * <p>URL do servlet: <code>/dashboard</code></p>
+ *
+ * @see HttpServlet
+ * @see DashboardInfoDAO
+ * @see InvestimentoUtils
+ */
 @WebServlet("/dashboard")
 public class DashboardServlet extends HttpServlet {
 

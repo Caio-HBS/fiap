@@ -18,8 +18,40 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Servlet responsável por listar e cadastrar investimentos do usuário.
+ * <p>
+ * Este servlet processa requisições para exibir a lista de investimentos cadastrados pelo usuário e para adicionar novos
+ * investimentos. Utiliza o <code>InvestimentoDAO</code>  para interagir com o banco de dados, exibindo os investimentos
+ * existentes e calculando o rendimento estimado de cada um.
+ * </p>
+ *
+ * <p>URL do servlet: <code>/investimentos</code></p>
+ *
+ * <p>Funcionalidades:</p>
+ * <ul>
+ *     <li><strong>GET</strong>: Recupera e exibe a lista de investimentos do usuário na página <code>investimentos.jsp</code>,
+ *     incluindo os rendimentos estimados.</li>
+ *     <li><strong>POST</strong>: Cadastra um novo investimento para o usuário e redireciona para a página de listagem.</li>
+ * </ul>
+ *
+ * <p>Parâmetros:</p>
+ * <ul>
+ *     <li><code>nome-investimento</code>, <code>desc-investimento</code>, <code>data-inicio-investimento</code>,
+ *     <code>valor-investimento</code>, <code>percent-mensal</code>: Dados para cadastro de um novo investimento.</li>
+ * </ul>
+ *
+ * <p>Exceções Tratadas:</p>
+ * <ul>
+ *     <li><code>DBException</code>: Captura erros de banco de dados e exibe uma mensagem de erro ao usuário, mantendo-o na mesma página.</li>
+ * </ul>
+ *
+ * @see HttpServlet
+ * @see InvestimentoDAO
+ * @see InvestimentoUtils
+ */
 @WebServlet("/investimentos")
-public class InvestimentosServlet  extends HttpServlet {
+public class InvestimentosServlet extends HttpServlet {
 
     private InvestimentoDAO investimentoDAO;
 
@@ -39,7 +71,7 @@ public class InvestimentosServlet  extends HttpServlet {
         if (investimentos != null) {
             req.setAttribute("investimentos", investimentos);
 
-            for (Investimento inv: investimentos) {
+            for (Investimento inv : investimentos) {
                 String rend = InvestimentoUtils.calcularRendimento(
                         inv.getValorInicial(), inv.getPercentMensal(), inv.getDataInicio()
                 );

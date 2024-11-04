@@ -16,6 +16,32 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * Servlet responsável por exibir, atualizar e excluir operações financeiras do usuário.
+ * <p>
+ * Esta classe permite que o usuário visualize detalhes de uma operação específica, atualize suas informações,
+ * ou exclua a operação. Utiliza o <code>OperacaoDAO</code> para gerenciar as operações no banco de dados.
+ * </p>
+ *
+ * <p>URL do servlet: <code>/operacao</code></p>
+ *
+ * <p>Funcionalidades:</p>
+ * <ul>
+ *     <li><strong>GET</strong>: Carrega uma operação específica para visualização e atualização,
+ *     encaminhando o usuário para a página <code>atualizar-operacao.jsp</code> com os dados da operação.</li>
+ *     <li><strong>POST</strong>: Processa ações de atualização ou exclusão de uma operação. Se o usuário
+ *     optar por atualizar, os novos dados são validados e salvos. Se optar por excluir, a operação é removida.</li>
+ * </ul>
+ *
+ * <p>Exceções Tratadas:</p>
+ * <ul>
+ *     <li><code>DBException</code>: Captura falhas de banco de dados ao atualizar ou excluir a operação, exibindo uma
+ *     mensagem de erro e mantendo o usuário na página de edição.</li>
+ * </ul>
+ *
+ * @see HttpServlet
+ * @see OperacaoDAO
+ */
 @WebServlet("/operacao")
 public class OperacaoServlet extends HttpServlet {
 
@@ -38,7 +64,6 @@ public class OperacaoServlet extends HttpServlet {
             op.setValorOperacao((int) op.getValorOperacao());
             session.setAttribute("op", op);
         }
-
         req.getRequestDispatcher("atualizar-operacao.jsp").forward(req, resp);
 
     }

@@ -12,8 +12,40 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
+/**
+ * Servlet responsável por exibir o conteúdo de uma notícia específica e suas informações de autor.
+ * <p>
+ * Esta classe processa requisições para carregar os detalhes de uma notícia, identificada pelo seu ID, e exibe as
+ * informações da notícia e do autor associado na página de visualização.
+ * Utiliza o <code>NoticiaDAO</code> para obter o conteúdo da notícia e o <code>UsuarioDAO</code> para buscar
+ * informações do autor.
+ * </p>
+ *
+ * <p>URL do servlet: <code>/noticia</code></p>
+ *
+ * <p>Funcionalidades:</p>
+ * <ul>
+ *     <li><strong>GET</strong>: Carrega uma notícia específica e as informações do autor,
+ *     encaminhando o usuário para a página <code>noticia.jsp</code> com os dados carregados.
+ *     Se o ID da notícia for inválido, redireciona para a página de erro <code>404.jsp</code>.</li>
+ * </ul>
+ *
+ * <p>Parâmetros:</p>
+ * <ul>
+ *     <li><code>id_noticia</code>: Identificador único da notícia a ser carregada.</li>
+ * </ul>
+ *
+ * <p>Exceções Tratadas:</p>
+ * <ul>
+ *     <li><code>NumberFormatException</code>: Caso o parâmetro <code>id_noticia</code> seja inválido,
+ *     redireciona o usuário para a página <code>404.jsp</code>.</li>
+ * </ul>
+ *
+ * @see HttpServlet
+ * @see NoticiaDAO
+ * @see UsuarioDAO
+ */
 @WebServlet("/noticia")
 public class NoticiaServlet extends HttpServlet {
 

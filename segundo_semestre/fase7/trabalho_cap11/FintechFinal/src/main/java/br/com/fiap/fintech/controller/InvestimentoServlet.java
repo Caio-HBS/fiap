@@ -15,6 +15,43 @@ import java.io.IOException;
 import java.sql.Date;
 import java.time.LocalDate;
 
+/**
+ * Servlet responsável por gerenciar as operações de consulta, atualização e remoção de investimentos do usuário.
+ * <p>
+ * Esta classe lida com requisições HTTP para consultar detalhes de um investimento, atualizá-lo ou excluí-lo.
+ * Utiliza o <code>InvestimentoDAO</code> para interagir com o banco de dados e processar os dados do investimento
+ * antes de redirecionar para a visualização adequada.
+ * </p>
+ *
+ * <p>URL do servlet: <code>/investimento</code></p>
+ *
+ * <p>Funcionalidades:</p>
+ * <ul>
+ *     <li><strong>GET</strong>: Obtém as informações de um investimento específico para exibição na página <code>atualizar-investimento.jsp</code>.</li>
+ *     <li><strong>POST</strong>:
+ *         <ul>
+ *             <li><code>atualizar</code>: Atualiza os dados do investimento com base nos valores recebidos do formulário.</li>
+ *             <li><code>deletar</code>: Remove o investimento do banco de dados.</li>
+ *         </ul>
+ *     </li>
+ * </ul>
+ *
+ * <p>Parâmetros:</p>
+ * <ul>
+ *     <li><code>id</code>: Identificador do investimento.</li>
+ *     <li><code>acao</code>: Determina a ação a ser realizada (<code>atualizar</code> ou <code>deletar</code>).</li>
+ *     <li><code>nome-investimento</code>, <code>desc-investimento</code>, <code>data-inicio-investimento</code>, <code>data-termino-investimento</code>,
+ *     <code>valor-investimento</code>, <code>percent-mensal</code>: Dados usados ao atualizar o investimento.</li>
+ * </ul>
+ *
+ * <p>Exceções Tratadas:</p>
+ * <ul>
+ *     <li><code>DBException</code>: Captura erros de banco de dados e exibe uma mensagem de erro ao usuário.</li>
+ * </ul>
+ *
+ * @see HttpServlet
+ * @see InvestimentoDAO
+ */
 @WebServlet("/investimento")
 public class InvestimentoServlet extends HttpServlet {
 
@@ -53,7 +90,6 @@ public class InvestimentoServlet extends HttpServlet {
         switch (acao) {
             case "atualizar":
                 LocalDate dtTermino;
-
                 String nmInvestimento = req.getParameter("nome-investimento");
                 String descInvestimento = req.getParameter("desc-investimento");
                 LocalDate dtInicio = Date.valueOf(req.getParameter("data-inicio-investimento")).toLocalDate();
