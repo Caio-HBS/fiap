@@ -12,10 +12,6 @@ DROP SEQUENCE seq_investimento;
 DROP TABLE t_noticia CASCADE CONSTRAINTS;
 DROP SEQUENCE seq_noticia;
 
-DROP TABLE t_conta_bancaria CASCADE CONSTRAINTS;
-DROP SEQUENCE seq_conta_bancaria;
-
-
 -- INVESTIMENTO
 CREATE SEQUENCE seq_investimento START WITH 1 INCREMENT BY 1;
 
