@@ -57,7 +57,11 @@
               <label for="tipo-operacao" class="mt-2"
                 ><b>Tipo de opera&ccedil;&atilde;o</b></label
               >
-              <select class="form-select" name="tipo-operacao" id="tipo-operacao">
+              <select
+                class="form-select"
+                name="tipo-operacao"
+                id="tipo-operacao"
+              >
                 <option selected disabled>
                   Selecionar tipo de opera&ccedil;&atilde;o
                 </option>
@@ -82,17 +86,16 @@
                 placeholder="Ex: R$20,00"
                 required
               />
-
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Cancelar
-            </button>
-            <button class="btn btn-success">Adicionar</button>
-          </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button class="btn btn-success">Adicionar</button>
+              </div>
             </form>
           </div>
         </div>
@@ -116,7 +119,8 @@
                 viewBox="0 0 16 16"
               >
                 <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                ></path>
               </svg>
             </button>
             <input
@@ -151,31 +155,51 @@
               <c:forEach items="${operacoes}" var="op">
                 <tr>
                   <td class="d-none d-lg-table-cell">${op.idOperacao}</td>
-                  <td>${fn:length(op.nomeOperacao) > 10 ? fn:substring(op.nomeOperacao, 0, 10) : op.nomeOperacao}</td>
-                  <td><fmt:formatNumber
+                  <td>
+                    ${fn:length(op.nomeOperacao) > 10 ?
+                    fn:substring(op.nomeOperacao, 0, 10) : op.nomeOperacao}
+                  </td>
+                  <td>
+                    <fmt:formatNumber
                       value="${op.valorOperacao}"
                       type="currency"
                       currencySymbol="R$"
                       groupingUsed="true"
                       maxFractionDigits="2"
                       minFractionDigits="2"
-                  /></td>
-                  <fmt:parseDate value="${op.dataOperacao.toString()}" pattern="yyyy-MM-dd" var="dataFormatada" />
-                  <td><fmt:formatDate value="${dataFormatada}" pattern="dd/MM/yyyy" /></td>
-                  <td class="d-none d-lg-table-cell">${op.tipoOperacao.toString() == "R" ? "Receita" : "Despesa"}</td>
+                    />
+                  </td>
+                  <fmt:parseDate
+                    value="${op.dataOperacao.toString()}"
+                    pattern="yyyy-MM-dd"
+                    var="dataFormatada"
+                  />
                   <td>
-                    <a href="operacao?id=${op.idOperacao}" class="text-decoration-none text-black">
-                    <svg
+                    <fmt:formatDate
+                      value="${dataFormatada}"
+                      pattern="dd/MM/yyyy"
+                    />
+                  </td>
+                  <td class="d-none d-lg-table-cell">
+                    ${op.tipoOperacao.toString() == "R" ? "Receita" : "Despesa"}
+                  </td>
+                  <td>
+                    <a
+                      href="operacao?id=${op.idOperacao}"
+                      class="text-decoration-none text-black"
+                    >
+                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
                         height="20"
                         fill="currentColor"
                         class="bi bi-info-circle-fill"
                         viewBox="0 0 16 16"
-                    >
-                      <path
-                          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path>
-                    </svg>
+                      >
+                        <path
+                          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"
+                        ></path>
+                      </svg>
                     </a>
                   </td>
                 </tr>
@@ -184,7 +208,10 @@
           </table>
         </c:when>
         <c:otherwise>
-          <p class="h1 text-center pt-5">Voc&ecirc; ainda n&atilde;o tem nenhuma opera&ccedil;&atilde;o cadastrada</p>
+          <p class="h1 text-center pt-5">
+            Voc&ecirc; ainda n&atilde;o tem nenhuma opera&ccedil;&atilde;o
+            cadastrada
+          </p>
         </c:otherwise>
       </c:choose>
     </main>

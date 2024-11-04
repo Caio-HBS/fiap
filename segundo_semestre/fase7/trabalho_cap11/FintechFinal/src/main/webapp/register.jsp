@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %> 
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html>
@@ -63,7 +63,9 @@
               required
             />
           </div>
-          <label for="dt-nascimento-registro" class="text-black-50">Data de nascimento</label>
+          <label for="dt-nascimento-registro" class="text-black-50"
+            >Data de nascimento</label
+          >
           <div class="input-group mb-3">
             <input
               type="date"
@@ -92,7 +94,8 @@
               type="password"
               class="form-control"
               name="senha-registro"
-              maxlength="20"
+              minlength="8"
+              maxlength="30"
               placeholder="Sua senha"
               required
             />
@@ -100,7 +103,8 @@
               type="password"
               class="form-control ms-3"
               name="senha-confirmar-registro"
-              maxlength="20"
+              minlength="8"
+              maxlength="30"
               placeholder="Confirme sua senha"
               required
             />

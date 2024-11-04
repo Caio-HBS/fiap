@@ -11,7 +11,9 @@
   </head>
   <body class="index-cover">
     <%@include file="includes/navbar-simple.jsp" %>
-    <main class="container d-flex justify-content-center align-items-center centralize">
+    <main
+      class="container d-flex justify-content-center align-items-center centralize"
+    >
       <div class="col-12 col-md-6 col-lg-4">
         <form
           action="login"
@@ -38,12 +40,16 @@
               type="password"
               class="form-control"
               name="senha-login"
+              minlength="8"
+              maxlength="30"
               placeholder="Sua senha"
             />
           </div>
           <div class="text-end">
             <a href="register.jsp">Ainda não é cadastrado?</a>
-            <button type="submit" class="btn btn-primary btn-lg ms-3"><b>Entrar</b></button>
+            <button type="submit" class="btn btn-primary btn-lg ms-3">
+              <b>Entrar</b>
+            </button>
           </div>
         </form>
       </div>

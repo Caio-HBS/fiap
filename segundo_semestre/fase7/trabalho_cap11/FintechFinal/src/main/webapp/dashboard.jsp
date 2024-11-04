@@ -1,6 +1,6 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %> 
-<%@ taglib prefix="c" uri="jakarta.tags.core" %> 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <fmt:setLocale value="pt_BR" />
 <!DOCTYPE html>
@@ -21,13 +21,16 @@
         <div
           class="col col-12 col-lg-3 bg-dark-subtle rounded-5 mt-1 mt-lg-0 d-none d-lg-block"
         >
-          <p><b>${not empty rend ? "Rendimento do &uacute;" : "&Uacute;"}ltimo investimento</b></p>
+          <p>
+            <b
+              >${not empty rend ? "Rendimento do &uacute;" : "&Uacute;"}ltimo
+              investimento</b
+            >
+          </p>
           <c:choose>
             <c:when test="${not empty info}">
               <p class="h1 pt-2">
-                <c:if test="${not empty rend and rend.length() >= 6}">
-                  +
-                </c:if>
+                <c:if test="${not empty rend and rend.length() >= 6}"> + </c:if>
                 <fmt:formatNumber
                   value="${not empty rend ? rend : info.valorUltimoInvestimento}"
                   type="currency"
@@ -143,7 +146,10 @@
       <h3 class="text-start">Servi&ccedil;os</h3>
       <div class="row gap-1 justify-content-around">
         <div class="col col-5 col-lg-2 border border-1 p-2">
-          <a href="${pageContext.request.contextPath}/operacoes" class="text-decoration-none">
+          <a
+            href="${pageContext.request.contextPath}/operacoes"
+            class="text-decoration-none"
+          >
             <img
               src="./resources/images/icons/check-list.png"
               alt="Uma prancheta com marca&ccedil;&otilde;es"
@@ -155,7 +161,10 @@
           </a>
         </div>
         <div class="col col-5 col-lg-2 border border-1 p-2">
-          <a href="${pageContext.request.contextPath}/investimentos" class="text-decoration-none">
+          <a
+            href="${pageContext.request.contextPath}/investimentos"
+            class="text-decoration-none"
+          >
             <img
               src="./resources/images/icons/add-task.png"
               alt="Uma pilha de arquivos vista de cima"
@@ -165,7 +174,10 @@
           </a>
         </div>
         <div class="col col-5 col-lg-2 border border-1 p-2">
-          <a href="${pageContext.request.contextPath}/meu-perfil" class="text-decoration-none">
+          <a
+            href="${pageContext.request.contextPath}/meu-perfil"
+            class="text-decoration-none"
+          >
             <img
               src="./resources/images/icons/profile.png"
               alt="Uma m&atilde;o com um joia em frente a uma foto"
@@ -175,7 +187,10 @@
           </a>
         </div>
         <div class="col col-5 col-lg-2 border border-1 p-2">
-          <a href="${pageContext.request.contextPath}/noticias" class="text-decoration-none">
+          <a
+            href="${pageContext.request.contextPath}/noticias"
+            class="text-decoration-none"
+          >
             <img
               src="./resources/images/icons/new-features.png"
               alt="Uma mão indicando novidades"

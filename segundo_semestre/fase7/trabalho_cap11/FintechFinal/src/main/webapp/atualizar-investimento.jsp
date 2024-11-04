@@ -18,16 +18,22 @@
           <div class="mt-5">
             <h1 class="h-5 text-center">Atualizar investimento</h1>
           </div>
-          <form class="text-end mt-2" action="investimento?id=${inv.idInvestimento}&acao=deletar" method="post">
-            <button class="btn btn-danger">
-              Deletar investimento
-            </button>
+          <form
+            class="text-end mt-2"
+            action="investimento?id=${inv.idInvestimento}&acao=deletar"
+            method="post"
+          >
+            <button class="btn btn-danger">Deletar investimento</button>
           </form>
           <c:if test="${not empty erro}">
             <p class="text-danger text-center"><b>${erro}</b></p>
           </c:if>
           <div class="modal-body">
-            <form class="d-flex flex-column" action="investimento?id=${inv.idInvestimento}&acao=atualizar" method="post">
+            <form
+              class="d-flex flex-column"
+              action="investimento?id=${inv.idInvestimento}&acao=atualizar"
+              method="post"
+            >
               <label for="nome-investimento">
                 <b>Nome do investimento</b>
               </label>
@@ -73,7 +79,9 @@
                 id="data-termino-investimento"
                 value="${inv.dataTermino}"
               />
-              <label for="valor-investimento" class="mt-2"><b>Valor inicial</b></label>
+              <label for="valor-investimento" class="mt-2"
+                ><b>Valor inicial</b></label
+              >
               <input
                 type="number"
                 class="form-control"
@@ -82,7 +90,9 @@
                 value="${inv.valorInicial}"
                 required
               />
-              <label for="percent-mensal" class="mt-2"><b>Percentual mensal</b></label>
+              <label for="percent-mensal" class="mt-2"
+                ><b>Percentual mensal</b></label
+              >
               <input
                 type="number"
                 class="form-control"

@@ -18,7 +18,11 @@
           <div class="mt-5">
             <h1 class="h-5 text-center">Atualizar opera&ccedil;&atilde;o</h1>
           </div>
-          <form class="text-end mt-2" action="operacao?id=${op.idOperacao}&acao=deletar" method="post">
+          <form
+            class="text-end mt-2"
+            action="operacao?id=${op.idOperacao}&acao=deletar"
+            method="post"
+          >
             <button class="btn btn-danger">
               Deletar opera&ccedil;&atilde;o
             </button>
@@ -27,7 +31,11 @@
             <p class="text-danger text-center"><b>${erro}</b></p>
           </c:if>
           <div class="modal-body">
-            <form class="d-flex flex-column" action="operacao?id=${op.idOperacao}&acao=atualizar" method="post">
+            <form
+              class="d-flex flex-column"
+              action="operacao?id=${op.idOperacao}&acao=atualizar"
+              method="post"
+            >
               <label for="nome-operacao"
                 ><b>Nome da opera&ccedil;&atilde;o</b></label
               >
@@ -86,7 +94,6 @@
                 value="${op.valorOperacao}"
                 required
               />
-
               <div class="mt-2 text-end">
                 <a href="operacoes" class="btn btn-warning">Cancelar</a>
                 <button class="btn btn-success ms-2">Atualizar</button>

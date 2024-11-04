@@ -32,7 +32,7 @@
         <div class="carousel-inner">
           <c:forEach items="${noticias}" var="noti" varStatus="status">
             <a href="${pageContext.request.contextPath}/noticia?id_noticia=${noti.idNoticia}"
-               class="text-decoration-none text-white">
+              class="text-decoration-none text-white">
               <div class="carousel-item ${status.index == 0 ? "active" : ""}">
                 <img src="./resources/images/noticias/${noti.imagem}" class="d-block w-100" alt="${noti.imagemAlt}">
                 <div class="carousel-caption d-none d-md-block">
@@ -53,7 +53,7 @@
         </div>
         </c:when>
         <c:otherwise>
-          <div class="">
+          <div>
             <p class="text-center text-white fs-1"><b>OPS! Parece que ainda n&atilde;o temos nenhuma
               not&iacute;cia para
               lhe

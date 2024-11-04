@@ -24,13 +24,17 @@
     <main class="container p-3 mt-5 bg-white rounded-2 shadow-lg">
       <h1 class="text-center">${noticia.titulo}</h1>
       <div class="d-flex justify-content-between">
-        <fmt:parseDate value="${noticia.dataPublicacao}" pattern="yyyy-MM-dd" var="data"/>
-        <p><fmt:formatDate value="${data}" pattern="dd 'de' MMMM 'de' yyyy" /></p>
+        <fmt:parseDate
+          value="${noticia.dataPublicacao}"
+          pattern="yyyy-MM-dd"
+          var="data"
+        />
+        <p>
+          <fmt:formatDate value="${data}" pattern="dd 'de' MMMM 'de' yyyy" />
+        </p>
         <p><b>${autor.nome} ${autor.sobrenome}</b></p>
       </div>
-      <div class="justificar-texto">
-        ${noticia.texto}
-      </div>
+      <div class="justificar-texto">${noticia.texto}</div>
     </main>
     <footer class="footer mt-auto text-center text-white">
       <p><b>&copy; 2024. Todos os direitos reservados.</b></p>
