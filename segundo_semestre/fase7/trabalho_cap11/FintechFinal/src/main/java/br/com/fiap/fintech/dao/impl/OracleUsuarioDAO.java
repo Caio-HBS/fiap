@@ -2,10 +2,12 @@ package br.com.fiap.fintech.dao.impl;
 
 import br.com.fiap.fintech.dao.ConnectionManager;
 import br.com.fiap.fintech.dao.UsuarioDAO;
+import br.com.fiap.fintech.dao.UsuarioInfoDAO;
 import br.com.fiap.fintech.exception.DBException;
 import br.com.fiap.fintech.model.Usuario;
 import br.com.fiap.fintech.model.UsuarioInfo;
 import br.com.fiap.fintech.util.CriptografiaUtils;
+import jakarta.servlet.http.HttpServlet;
 
 import java.sql.*;
 

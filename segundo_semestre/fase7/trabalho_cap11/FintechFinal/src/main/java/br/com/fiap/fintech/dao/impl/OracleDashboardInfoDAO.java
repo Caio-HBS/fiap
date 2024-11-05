@@ -35,7 +35,6 @@ public class OracleDashboardInfoDAO implements DashboardInfoDAO {
                     "o.id_usuario = ? ORDER BY o.dt_operacao DESC FETCH FIRST 1 ROWS ONLY) rec ON " +
                     "su.id_usuario = rec.id_usuario OR inv.id_usuario = rec.id_usuario"
             );
-
             stmt.setInt(1, usuarioId);
             stmt.setInt(2, usuarioId);
             stmt.setInt(3, usuarioId);
@@ -61,7 +60,7 @@ public class OracleDashboardInfoDAO implements DashboardInfoDAO {
                         dtReceita != null ? dtReceita.toLocalDate() : null,
                         valorReceita, nmInvestimento, valorInvestimento, percentInvestimento,
                         dtInvestimento != null ? dtInvestimento.toLocalDate() : null
-                        );
+                );
             }
 
         } catch (SQLException e) {
