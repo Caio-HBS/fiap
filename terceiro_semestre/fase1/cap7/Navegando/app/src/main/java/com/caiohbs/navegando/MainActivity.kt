@@ -7,7 +7,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.caiohbs.navegando.screens.LoginScreen
+import com.caiohbs.navegando.screens.MenuScreen
+import com.caiohbs.navegando.screens.PedidosScreen
+import com.caiohbs.navegando.screens.PerfilScreen
 import com.caiohbs.navegando.ui.theme.NavegandoTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,7 +25,16 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    LoginScreen()
+                    val navController = rememberNavController()
+                    NavHost(
+                        navController = navController,
+                        startDestination = "login"
+                    ) {
+                        composable(route = "login") { LoginScreen(navController) }
+                        composable(route = "menu") { MenuScreen(navController) }
+                        composable(route = "pedidos") { PedidosScreen(navController) }
+                        composable(route = "perfil") { PerfilScreen(navController) }
+                    }
                 }
             }
         }
