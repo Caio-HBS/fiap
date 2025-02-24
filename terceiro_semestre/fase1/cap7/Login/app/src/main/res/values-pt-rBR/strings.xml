@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="login">Entrar</string>
+    <string name="subtitle">Por favor, preencha suas informações</string>
+    <string name="email">Digite seu e-mail</string>
+    <string name="password">Digite sua senha</string>
+    <string name="enter">Entrar</string>
+</resources>
