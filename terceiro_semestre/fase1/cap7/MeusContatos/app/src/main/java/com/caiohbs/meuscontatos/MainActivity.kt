@@ -19,7 +19,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -27,6 +26,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -63,6 +63,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ContatosScreen() {
 
+    val context = LocalContext.current
+    val contatoRepository = ContatoRepository(context)
+
     var nomeState = remember {
         mutableStateOf("")
     }
@@ -73,6 +76,10 @@ fun ContatosScreen() {
 
     var amigoState = remember {
         mutableStateOf(false)
+    }
+
+    var listaContatosState = remember {
+        mutableStateOf(contatoRepository.listarContatos())
     }
 
     Column {
@@ -88,9 +95,14 @@ fun ContatosScreen() {
             },
             onAmigoChange ={
                 amigoState.value = it
+            },
+            atualizar = {
+                listaContatosState.value = contatoRepository.listarContatos()
             }
         )
-        ContatoList()
+        ContatoList(listaContatosState, atualizar = {
+            listaContatosState.value = contatoRepository.listarContatos()
+        })
     }
 }
 
@@ -101,7 +113,8 @@ fun ContatoForm(
     amigo: Boolean,
     onNomeChange: (String) -> Unit,
     onTelefoneChange: (String) -> Unit,
-    onAmigoChange: (Boolean) -> Unit
+    onAmigoChange: (Boolean) -> Unit,
+    atualizar: () -> Unit
 ) {
 
     val context = LocalContext.current
@@ -159,6 +172,7 @@ fun ContatoForm(
                 val contato = Contato(id = 0, nome = nome, telefone = telefone, amigo = amigo)
 
                 contatoRepository.salvar(contato)
+                atualizar()
             },
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -171,21 +185,25 @@ fun ContatoForm(
 }
 
 @Composable
-fun ContatoList() {
+fun ContatoList(listaContatos: MutableState<List<Contato>>, atualizar: () -> Unit) {
     Column(modifier = Modifier
         .fillMaxSize()
         .padding(16.dp)
         .verticalScroll(rememberScrollState())
     ) {
-        for (i in 0..10){
-            ContatoCard()
+        for (contato in listaContatos.value) {
+            ContatoCard(contato, atualizar)
             Spacer(modifier = Modifier.height(4.dp))
         }
     }
 }
 
 @Composable
-fun ContatoCard() {
+fun ContatoCard(contato: Contato, atualizar: () -> Unit) {
+
+    val context = LocalContext.current
+    val contatoRepository = ContatoRepository(context)
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
@@ -199,22 +217,28 @@ fun ContatoCard() {
                 .padding(8.dp)
                 .weight(2f)) {
                 Text(
-                    text = "Nome do Contato",
+                    text = contato.nome,
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
-                    text = "8888-9999",
+                    text = contato.telefone,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold
                 )
-                Text(
-                    text = "Amigo",
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Bold
-                )
+                if (contato.amigo) {
+                    Text(
+                        text = "Amigo",
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
             }
-            IconButton(onClick = { /*TODO*/ }) {
+            IconButton(onClick = {
+                contatoRepository.excluir(contato)
+
+                atualizar()
+            }) {
                 Icon(
                     imageVector = Icons.Default.Delete,
                     contentDescription = ""
