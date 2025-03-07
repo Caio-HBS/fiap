@@ -24,6 +24,10 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -32,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.caiohbs.listaslazy.model.Game
 import com.caiohbs.listaslazy.repository.getAllGames
+import com.caiohbs.listaslazy.repository.getGamesByStudio
 import com.caiohbs.listaslazy.ui.theme.ListasLazyTheme
 
 class MainActivity : ComponentActivity() {
@@ -53,6 +58,15 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun GamesScreen() {
+
+    var studioState by remember {
+        mutableStateOf("")
+    }
+
+    var listGamesByStudio by remember {
+        mutableStateOf(getGamesByStudio(studioState))
+    }
+
     Column(modifier = Modifier.padding(16.dp)) {
         Text(
             text = "Meus jogos favoritos",
@@ -61,14 +75,20 @@ fun GamesScreen() {
         )
         Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(
-            value = "",
-            onValueChange = {},
+            value = studioState,
+            onValueChange = {
+                studioState = it
+            },
             modifier = Modifier.fillMaxWidth(),
             label = {
                 Text(text = "Nome do estúdio")
             },
             trailingIcon = {
-                IconButton(onClick = {}) {
+                IconButton(
+                    onClick = {
+                        listGamesByStudio = getGamesByStudio(studioState)
+                }
+                ) {
                     Icon(
                         imageVector = Icons.Default.Search,
                         contentDescription = ""
@@ -78,7 +98,7 @@ fun GamesScreen() {
         )
         Spacer(modifier = Modifier.height(16.dp))
         LazyColumn() {
-            items(getAllGames()) {
+            items(listGamesByStudio) {
                 GameCard(game = it)
             }
         }
